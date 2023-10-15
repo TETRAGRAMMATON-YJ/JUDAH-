@@ -12,6 +12,343 @@ actions-importer-labs/travisci-deploy-example,desiderati/github-action-pushover@
 Pipeline,Secret,File path
 actions-importer-labs/travisci-deploy-example,${{ secrets.PUSHOVER_USER_KEY }},tmp/audit/actions-importer-labs/travisci-deploy-example/.github/workflows/travisci-deploy-example.yml
 
+Pipeline,Runner,File patTotal: **25**
+
+Known: **22 (88%)**
+
+- install: **6**
+- script: **5**
+- before_script: **3**
+- rvm: **2**
+- after_deploy: **2**
+- pushover: **1**
+- irc: **1**
+- before_deploy: **1**
+- php: **1**
+
+Unknown: **1 (4%)**
+
+- codedeploy: **1**
+
+Unsupported: **2 (8%)**
+
+- sudo: **2**
+
+Actions: **28**
+
+- run: **17**
+- actions/checkout@v2: **6**
+- ruby/setup-ruby@v1: **2**
+- rectalogic/notify-irc@v1: **1**
+- shivammathur/setup-php@v2: **1**
+- desiderati/github-action-pushover@v1: **1**### Manual tasks
+
+Total: **1**
+
+Secrets: **1**
+
+- `${{ secrets.PUSHOVER_USER_KEY }}`: **1**https://travis-ci.com/actions-importer-labs# Audit summary
+
+Summary for [Travis CI instance](https://travis-ci.com/actions-importer-labs)
+
+- GitHub Actions Importer version: **0.1.0.13539 (5bb6c723d6db3688ea0653e14bbf3c63df445bfc)**
+- Performed at: **9/16/22 at 20:01**
+
+## Pipelines
+
+Total: **5**
+
+- Successful: **0 (0%)**
+- Partially successful: **5 (100%)**
+- Unsupported: **0 (0%)**
+- Failed: **0 (0%)**
+
+### Job types
+
+Supported: **5 (100%)**
+
+- php: **1**
+- nodejs: **1**
+- ruby: **2**
+- python: **1**
+
+### Build steps
+
+Total: **25**
+
+Known: **22 (88%)**
+
+- install: **6**
+- script: **5**
+- before_script: **3**
+- rvm: **2**
+- after_deploy: **2**
+- pushover: **1**
+- irc: **1**
+- before_deploy: **1**
+- php: **1**
+
+Unknown: **1 (4%)**
+
+- codedeploy: **1**
+
+Unsupported: **2 (8%)**
+
+- sudo: **2**
+
+Actions: **28**
+
+- run: **17**
+- actions/checkout@v2: **6**
+- ruby/setup-ruby@v1: **2**
+- rectalogic/notify-irc@v1: **1**
+- shivammathur/setup-php@v2: **1**
+- desiderati/github-action-pushover@v1: **1**
+
+### Triggers
+
+Total: **30**
+
+Known: **30 (100%)**
+
+- crons: **5**
+- branches: **5**
+- config_validation: **5**
+- build_pull_requests: **5**
+- build_pushes: **5**
+- builds_only_with_travis_yml: **5**
+
+Actions: **10**
+
+- pull_request: **5**
+- push: **5**
+
+### Environment
+
+Total: **1**
+
+Known: **1 (100%)**
+
+- DB: **1**
+
+Actions: **1**
+
+- DB: **1**
+
+### Other
+
+Total: **15**
+
+Known: **10 (66%)**
+
+- auto_cancel_pull_requests: **5**
+- auto_cancel_pushes: **5**
+
+Unknown: **5 (33%)**
+
+- maximum_number_of_builds: **5**
+
+Actions: **3**
+
+- matrix: **2**
+- DB: **1**
+
+### Manual tasks
+
+Total: **1**
+
+Secrets: **1**
+
+- `${{ secrets.PUSHOVER_USER_KEY }}`: **1**
+
+### Partially successful
+
+#### actions-importer-labs/travisci-php-example
+
+- [actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml](actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml)
+- [actions-importer-labs/travisci-php-example/config.json](actions-importer-labs/travisci-php-example/config.json)
+- [actions-importer-labs/travisci-php-example/source.yml](actions-importer-labs/travisci-php-example/source.yml)
+
+#### actions-importer-labs/travisci-nodejs-example
+
+- [actions-importer-labs/travisci-nodejs-example/.github/workflows/travisci-nodejs-example.yml](actions-importer-labs/travisci-nodejs-example/.github/workflows/travisci-nodejs-example.yml)
+- [actions-importer-labs/travisci-nodejs-example/config.json](actions-importer-labs/travisci-nodejs-example/config.json)
+- [actions-importer-labs/travisci-nodejs-example/source.yml](actions-importer-labs/travisci-nodejs-example/source.yml)
+
+#### actions-importer-labs/travisci-ruby-example
+
+- [actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.yml](actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.yml)
+- [actions-importer-labs/travisci-ruby-example/config.json](actions-importer-labs/travisci-ruby-example/config.json)
+- [actions-importer-labs/travisci-ruby-example/source.yml](actions-importer-labs/travisci-ruby-example/source.yml)
+
+#### actions-importer-labs/travisci-python-example
+
+- [actions-importer-labs/travisci-python-example/.github/workflows/travisci-python-example.yml](actions-importer-labs/travisci-python-example/.github/workflows/travisci-python-example.yml)
+- [actions-importer-labs/travisci-python-example/config.json](actions-importer-labs/travisci-python-example/config.json)
+- [actions-importer-labs/travisci-python-example/source.yml](actions-importer-labs/travisci-python-example/source.yml)
+
+#### actions-importer-labs/travisci-deploy-example
+
+- [actions-importer-labs/travisci-deploy-example/.github/workflows/travisci-deploy-example.yml](actions-importer-labs/travisci-deploy-example/.github/workflows/travisci-deploy-example.yml)
+- [actions-importer-labs/travisci-deploy-example/config.json](actions-importer-labs/travisci-deploy-example/config.json)
+- [actions-importer-labs/travisci-deploy-example/source.yml](actions-importer-labs/travisci-deploy-example/source.ym# Audit summary
+
+Summary for [Travis CI instance](https://travis-ci.com/actions-importer-labs)
+
+- GitHub Actions Importer version: **0.1.0.13539 (5bb6c723d6db3688ea0653e14bbf3c63df445bfc)**
+- Performed at: **9/16/22 at 20:01**
+
+## Pipelines
+
+Total: **5**
+
+- Successful: **0 (0%)**
+- Partially successful: **5 (100%)**
+- Unsupported: **0 (0%)**
+- Failed: **0 (0%)**
+
+### Job types
+
+Supported: **5 (100%)**
+
+- php: **1**
+- nodejs: **1**
+- ruby: **2**
+- python: **1**
+
+### Build steps
+
+Total: **25**
+
+Known: **22 (88%)**
+
+- install: **6**
+- script: **5**
+- before_script: **3**
+- rvm: **2**
+- after_deploy: **2**
+- pushover: **1**
+- irc: **1**
+- before_deploy: **1**
+- php: **1**
+
+Unknown: **1 (4%)**
+
+- codedeploy: **1**
+
+Unsupported: **2 (8%)**
+
+- sudo: **2**
+
+Actions: **28**
+
+- run: **17**
+- actions/checkout@v2: **6**
+- ruby/setup-ruby@v1: **2**
+- rectalogic/notify-irc@v1: **1**
+- shivammathur/setup-php@v2: **1**
+- desiderati/github-action-pushover@v1: **1**
+
+### Triggers
+
+Total: **30**
+
+Known: **30 (100%)**
+
+- crons: **5**
+- branches: **5**
+- config_validation: **5**
+- build_pull_requests: **5**
+- build_pushes: **5**
+- builds_only_with_travis_yml: **5**
+
+Actions: **10**
+
+- pull_request: **5**
+- push: **5**
+
+### Environment
+
+Total: **1**
+
+Known: **1 (100%)**
+
+- DB: **1**
+
+Actions: **1**
+
+- DB: **1**
+
+### Other
+
+Total: **15**
+
+Known: **10 (66%)**
+
+- auto_cancel_pull_requests: **5**
+- auto_cancel_pushes: **5**
+
+Unknown: **5 (33%)**
+
+- maximum_number_of_builds: **5**
+
+Actions: **3**
+
+- matrix: **2**
+- DB: **1**
+
+### Manual tasks
+
+Total: **1**
+
+Secrets: **1**
+
+- `${{ secrets.PUSHOVER_USER_KEY }}`: **1**
+
+### Partially successful
+
+#### actions-importer-labs/travisci-php-example
+
+- [actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml](actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml)
+- [actions-importer-labs/travisci-php-example/config.json](actions-importer-labs/travisci-php-example/config.json)
+- [actions-importer-labs/travisci-php-example/source.yml](actions-importer-labs/travisci-php-example/source.yml)
+
+#### actions-importer-labs/travisci-nodejs-example
+
+- [actions-importer-labs/travisci-nodejs-example/.github/workflows/travisci-nodejs-example.yml](actions-importer-labs/travisci-nodejs-example/.github/workflows/travisci-nodejs-example.yml)
+- [actions-importer-labs/travisci-nodejs-example/config.json](actions-importer-labs/travisci-nodejs-example/config.json)
+- [actions-importer-labs/travisci-nodejs-example/source.yml](actions-importer-labs/travisci-nodejs-example/source.yml)
+
+#### actions-importer-labs/travisci-ruby-example
+
+- [actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.yml](actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.yml)
+- [actions-importer-labs/travisci-ruby-example/config.json](actions-importer-labs/travisci-ruby-example/config.json)
+- [actions-importer-labs/travisci-ruby-example/source.yml](actions-importer-labs/travisci-ruby-example/source.yml)
+
+#### actions-importer-labs/travisci-python-example
+
+- [actions-importer-labs/travisci-python-example/.github/workflows/travisci-python-example.yml](actions-importer-labs/travisci-python-example/.github/workflows/travisci-python-example.yml)
+- [actions-importer-labs/travisci-python-example/config.json](actions-importer-labs/travisci-python-example/config.json)
+- [actions-importer-labs/travisci-python-example/source.yml](actions-importer-labs/travisci-python-example/source.yml)
+
+#### actions-importer-labs/travisci-deploy-example
+
+- [actions-importer-labs/travisci-deploy-example/.github/workflows/travisci-deploy-example.yml](actions-importer-labs/travisci-deploy-example/.github/workflows/travisci-deploy-example.yml)
+- [actions-importer-labs/travisci-deploy-example/config.json](actions-importer-labs/travisci-deploy-example/config.json)
+- [actions-importer-labs/travisci-deploy-example/source.yml](actions-importer-labs/travisci-deploy-example/source.yml)9/16/22 at 20:01https://travis-ci.com/actions-importer-labsPipeline,Action,File path
+actions-importer-labs/travisci-php-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml
+actions-importer-labs/travisci-php-example,shivammathur/setup-php@v2,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml
+actions-importer-labs/travisci-php-example,rectalogic/notify-irc@v1,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml
+actions-importer-labs/travisci-nodejs-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-nodejs-example/.github/workflows/travisci-nodejs-example.yml
+actions-importer-labs/travisci-ruby-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.yml
+actions-importer-labs/travisci-ruby-example,ruby/setup-ruby@v1,tmp/audit/actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.yml
+actions-importer-labs/travisci-python-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-python-example/.github/workflows/travisci-python-example.yml
+actions-importer-labs/travisci-deploy-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-deploy-example/.github/workflows/travisci-deploy-example.yml
+actions-importer-labs/travisci-deploy-example,desiderati/github-action-pushover@v1,tmp/audit/actions-importer-labs/travisci-deploy-example/.github/workflows/travisci-deploy-example.yml
+
+Pipeline,Secret,File path
+actions-importer-labs/travisci-deploy-example,${{ secrets.PUSHOVER_USER_KEY }},tmp/audit/actions-importer-labs/travisci-deploy-example/.github/workflows/travisci-deploy-example.yml
+
 Pipeline,Runner,File pat### Partially successful
 
 #### actions-importer-labs/travisci-php-example
