@@ -1,4 +1,18 @@
-# Configure credentials for GitHub Actions Importer
+gh actions-importer update$ gh actions-importer update
+Login Succeeded
+latest: Pulling from actions-importer/cli
+Digest: sha256:a7d00dee8a37e25da59daeed44b1543f476b00fa2c41c47f48deeaf34a215bbb
+Status: Image is up to date for ghcr.io/actions-importer/cli:latest
+ghcr.io/actions-importer/cli:latestghcr.io/actions-importer/cli:latest$ gh actions-importer configure
+✔ Which CI providers are you configuring?: Travis CI
+Enter the following values (leave empty to omit):
+✔ Personal access token for GitHub: ***************
+✔ Base url of the GitHub instance: https://github.com
+✔ Personal access token for Travis CI: ***************
+✔ Base url of the Travis CI instance: https://travis-ci.com
+✔ Travis CI organization name: actions-importer-labs
+Environment variables successfully updated.https://github.com$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-importergh actions-importer version# Configure credentials for GitHub Actions Importer
 
 In this lab, you will use the `configure` CLI command to set the required credentials and information for GitHub Actions Importer to use when working with Travis CI and GitHub.
 
