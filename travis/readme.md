@@ -1,4 +1,4 @@
-# Travis CI migrations powered by GitHub Actions Importer
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)https://raw.githubusercontent.com/Homebrew/install/HEAD/install.shconda install ghmamba install ghpost-link.shpre-unlink.batpre-link.shconda search gh --channel conda-forge# Travis CI migrations powered by GitHub Actions Importer
 
 The instructions below will guide you through configuring a GitHub Codespaces environment that your will use in subsequent labs to learn how to use GitHub Actions Importer to migrate Travis CI pipelines to GitHub Actions.
 
