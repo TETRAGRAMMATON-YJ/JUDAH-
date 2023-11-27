@@ -22,3 +22,18 @@ _articles/zh-hant/maintaining-balance-for-open-source-maintainers.md<svg xmlns="
   },
   "postCreateCommand": "gh extension install github/gh-actions-importer || echo 'Could not auto-build. Skipping.' "
 }
+1d99d42142deafd098d69b8047d7ef8021a8d543
+ Welcome to Apache's Jira issue tracker!
+
+Anyone is free to find issues. You must register and login if you want to create, comment or vote on, or watch issues. Only developers can edit, prioritize, schedule or resolve issues.
+
+Note that public signup for this Jira instance is disabled. Go to the self-serve signup page to apply for an account, which needs a projects approval.
+
+We migrated some projects here from Bugzilla. If you had a Bugzilla account, log in using your email address as your username. You will need to have a new password mailed to you. You can search for issues by their old Bugzilla IDs in the quick search box above.
+
+Need to create an INFRA ticket? See the INFRA Jira Guidelines on the Infra Website.
+
+If your ASF project wants to use Jira goto our selfserve to setup a new project.
+
+PRIVACY NOTICE: ASF Jira is an open issue tracking system. Activity on most issues, will be publicly visible. Email addresses are not visible to other users unless you set your email address as your username
+	https://github.com/yangsenius/learning-to-learn-by-pytorch/assets/88852908/c1c43654-15d8-483c-b96b-adb18e271284![Icosahedral_tensegrity_structure.png](https://github.com/yangsenius/learning-to-learn-by-pytorch/assets/88852908/c1c43654-15d8-483c-b96b-adb18e271284)InstantaneousChrist el
