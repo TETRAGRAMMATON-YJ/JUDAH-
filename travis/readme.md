@@ -74,3 +74,29 @@ The CLI extension for GitHub Actions Importer can be manually installed by follo
   ```bash
   gh actions-importer version
   ```
+    Welcome to Apache's Jira issue tracker!
+
+Anyone is free to find issues. You must register and login if you want to create, comment or vote on, or watch issues. Only developers can edit, prioritize, schedule or resolve issues.
+
+Note that public signup for this Jira instance is disabled. Go to the self-serve signup page to apply for an account, which needs a projects approval.
+
+We migrated some projects here from Bugzilla. If you had a Bugzilla account, log in using your email address as your username. You will need to have a new password mailed to you. You can search for issues by their old Bugzilla IDs in the quick search box above.
+
+Need to create an INFRA ticket? See the INFRA Jira Guidelines on the Infra Website.
+
+If your ASF project wants to use Jira goto our selfserve to setup a new project.
+
+PRIVACY NOTICE: ASF Jira is an open issue tracking system. Activity on most issues, will be publicly visible. Email addresses are not visible to other users unless you set your email address as your username
+	![Icosahedral_tensegrity_structure.png](https://github.com/yangsenius/learning-to-learn-by-pytorch/assets/88852908/c1c43654-15d8-483c-b96b-adb18e271284)
+https://travis-ci.comer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       unknownhttps://github.com$ gh actions-importer configure
+✔ Which CI providers are you configuring?: Travis CI
+Enter the following values (leave empty to omit):
+✔ Personal access token for GitHub: ***************
+✔ Base url of the GitHub instance: https://github.com
+✔ Personal access token for Travis CI: ***************
+✔ Base url of the Travis CI instance: https://travis-ci.com
+✔ Travis CI organization name: actions-importer-labs
+Environment variables successfully updated.
