@@ -151,3 +151,83 @@ If your ASF project wants to use Jira goto our selfserve to setup a new project.
 PRIVACY NOTICE: ASF Jira is an open issue tracking system. Activity on most issues, will be publicly visible. Email addresses are not visible to other users unless you set your email address as your username
 	![Icosahedral_tensegrity_structure.png](https://github.com/yangsenius/learning-to-learn-by-pytorch/assets/88852908/c1c43654-15d8-483c-b96b-adb18e271284)
 actions-importer-labs/travisci-ruby-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.ymlactions-importer-labs/travisci-nodejs-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-nodejs-example/.github/workflows/travisci-nodejs-example.ymlactions-importer-labs/travisci-php-example,rectalogic/notify-irc@v1,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.ymlactions-importer-labs/travisci-php-example,shivammathur/setup-php@v2,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.ymlactions-importer-labs/travisci-php-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml
+https://dev.azure.com/:organization configuring the GitHub Codespaces environment that you will use in these labs to learn how to use GitHub Actions Importer to migrate Azure DevOps pipelines to GitHub Actions.
+
+These steps must be completed prior to starting other labs.
+
+Create your own repository for these labs
+Ensure that you have created a repository using actions/importer-labs as a template.
+Configure your codespace
+Start a new codespace.
+
+Click the Code button on your repository's landing page.
+Click the Codespaces tab.
+Click Create codespaces on main to create the codespace.
+After the codespace has initialized there will be a terminal present.
+Verify the GitHub Actions Importer CLI is installed and working. More information on the GitHub Actions Importer extension for the official GitHub CLI can be found here.
+
+Run the following command in the codespace terminal:
+
+gh actions-importer version
+Verify the output is similar to below.
+
+$ gh actions-importer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       unknown
+If gh actions-importer version did not produce similar output, please refer to the troubleshooting section.
+
+Bootstrap your Azure DevOps organization
+Create an Azure DevOps personal access token (PAT):
+
+Navigate to your existing organization (https://dev.azure.com/:organization) in your browser.
+In the top right corner of the screen, click User settings.
+Click Personal access tokens.
+Select + New Token
+Name your token, select the organization where you want to use the token, and set your token to automatically expire after a set number of days.
+Select the following scopes (you may need to select Show all scopes at the bottom of the page to reveal all scopes):
+Agents Pool: Read
+Build: Read & execute
+Code: Read & write
+Project and Team: Read, write, & manage
+Release: Read
+Service Connections: Read
+Task Groups: Read
+Variable Groups: Read
+Click Create.
+Copy the generated API token and save it in a safe location.
+Execute the Azure DevOps setup script that will create a new Azure DevOps project in your organization to be used in the following labs. This script should only be run once.
+
+Run the following command from the codespace terminal, replacing the values accordingly:
+
+:organization: the name of your existing Azure DevOps organization
+:project: the name of the project to be created in your Azure DevOps organization
+:access_token: the PAT created in step 1 above
+./azure_devops/bootstrap/setup --organization :organization --project :project --access-token :access-token
+Open the newly created Azure DevOps project in your browser (https://dev.azure.com/:organization/:project)
+
+Once authenticated, you will see an Azure DevOps project with a few predefined pipelines.
+Labs for Azure DevOps
+Perform the following labs to learn how to migrate Azure DevOps pipelines to GitHub Actions using GitHub Actions Importer:
+
+Configure credentials for GitHub Actions Importer
+Perform an audit of an Azure DevOps project
+Forecast potential build runner usage
+Perform a dry-run migration of an Azure DevOps pipeline
+Use custom transformers to customize GitHub Actions Importer's behavior
+Perform a production migration of a Azure DevOps pipeline
+Troubleshoot the GitHub Actions Importer CLI
+The CLI extension for GitHub Actions Importer can be manually installed by following these steps:
+
+Verify you are in the codespace terminal
+
+Run this command from within the codespace terminal:
+
+gh extension install github/gh-actions-importer
+Verify the result of the install contains:
+
+$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-importer
+Verify GitHub Actions Importer CLI extension is installed and working by running the following command from the codespace terminal:
+
+gh actions-importer version1https://dev.azure.com/:organization/:projectactions-importer-labs/travisci-ruby-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.ymlactions-importer-labs/travisci-nodejs-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-nodejs-example/.github/workflows/travisci-nodejs-example.ymlactions-importer-labs/travisci-php-example,rectalogic/notify-irc@v1,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.ymlactions-importer-labs/travisci-php-example,shivammathur/setup-php@v2,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml
