@@ -111,3 +111,15 @@ If your ASF project wants to use Jira goto our selfserve to setup a new project.
 
 PRIVACY NOTICE: ASF Jira is an open issue tracking system. Activity on most issues, will be publicly visible. Email addresses are not visible to other users unless you set your email address as your username
 	![Icosahedral_tensegrity_structure.png](https://github.com/yangsenius/learning-to-learn-by-pytorch/assets/88852908/c1c43654-15d8-483c-b96b-adb18e271284)https://github.com/yangsenius/learning-to-learn-by-pytorch/assets/88852908/c1c43654-15d8-483c-b96b-adb18e271284
+https://github.com$ gh actions-importer configure
+✔ Which CI providers are you configuring?: Travis CI
+Enter the following values (leave empty to omit):
+✔ Personal access token for GitHub: ***************
+✔ Base url of the GitHub instance: https://github.com
+✔ Personal access token for Travis CI: ***************
+✔ Base url of the Travis CI instance: https://travis-ci.com
+✔ Travis CI organization name: actions-importer-labs
+Environment variables successfully updated.er version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       unknownhttps://travis-ci.com1d99d42142deafd098d69b8047d7ef8021a8d543
