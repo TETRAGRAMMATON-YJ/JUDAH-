@@ -231,3 +231,62 @@ $ gh extension install github/gh-actions-importer
 Verify GitHub Actions Importer CLI extension is installed and working by running the following command from the codespace terminal:
 
 gh actions-importer version1https://dev.azure.com/:organization/:projectactions-importer-labs/travisci-ruby-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-ruby-example/.github/workflows/travisci-ruby-example.ymlactions-importer-labs/travisci-nodejs-example,actions/checkout@v2,tmp/audit/actions-importer-labs/travisci-nodejs-example/.github/workflows/travisci-nodejs-example.ymlactions-importer-labs/travisci-php-example,rectalogic/notify-irc@v1,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.ymlactions-importer-labs/travisci-php-example,shivammathur/setup-php@v2,tmp/audit/actions-importer-labs/travisci-php-example/.github/workflows/travisci-php-example.yml
+        Start a new codespace
+
+Click the Code button on your repository's landing page.
+Click the Codespaces tab.
+Click Create codespaces on main to create the codespace.
+After the codespace has initialized there will be a terminal present.
+Verify the GitHub Actions Importer CLI is installed and working. More information on the GitHub Actions Importer extension for the official GitHub CLI can be found here.
+
+Run the following command in the codespace terminal:
+
+gh actions-importer version
+Verify the output is similar to below.
+
+$ gh actions-importer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       unknown
+If gh actions-importer version did not produce similar output, please refer to the troubleshooting section.
+
+Bootstrap a GitLab server
+Execute the GitLab setup script that will start a container with GitLab running inside of it. The script should be executed when starting a new codespace or restarting an existing one.
+
+Run the following command from the codespace terminal:
+
+./gitlab/bootstrap/setup.sh
+After some time, a pop-up box should appear with a link to the URL for your GitLab server.
+
+You can also access the URL by going to the Ports tab in your terminal. Right-click the URL listed under the Local Address and click the Open in Browser tab.
+
+Open the GitLab server in your browser and use the following credentials to authenticate:
+
+Username: root
+Password: actions-importer-labs!
+Once authenticated, you should see a GitLab server with a few predefined pipelines in the actions-importer group.
+
+Labs for GitLab
+Perform the following labs to learn more about Actions migrations with GitHub Actions Importer:
+
+Configure credentials for GitHub Actions Importer
+Perform an audit on GitLab pipelines
+Forecast potential build runner usage
+Perform a dry-run migration of a GitLab pipeline
+Use custom transformers to customize GitHub Actions Importer's behavior
+Perform a production migration of a GitLab pipeline
+Troubleshoot the GitHub Actions Importer CLI
+The CLI extension for GitHub Actions Importer can be manually installed by following these steps:
+
+Verify you are in the codespace terminal
+
+Run this command from within the codespace terminal:
+
+gh extension install github/gh-actions-importer
+Verify the result of the install contains:
+
+$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-importer
+Verify GitHub Actions Importer CLI extension is installed and working by running the following command from the codespace terminal:
+
+gh actions-importer version
