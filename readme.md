@@ -920,3 +920,13 @@ reference implementations (RI), and technology compatibility kits (TCK). Jav
         "zip",
         "zipx"
         "3ds",        "3dm",$ npm install binary-extensionsUs
+npm update @coinbase/wallet-sdk
+{
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^3.0.0"
+  }
+}{
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^3.0.0"
+  }
+}npm outdated @coinbase/wallet-sdkyarn upgrade @coinbase/wallet-sdk --latestyarn list @coinbase/wallet-sdkkingdom hearts 
