@@ -2792,8 +2792,13 @@ const result1+2=equation
 2(x); console.log(result1);outputs the
 result of the
 
+equations 2} from:/utis|s/equations;
 
-
+                       const x=2
+                       const y=3
+const result1+1=equation1 (x);
+console.log(result1);//output's the
+results of 3 first equation for x=2,y=3
 
 
 
