@@ -1,4 +1,89 @@
-_articles/zh-hant/maintaining-balance-for-open-source-maintainers.md<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#659AD3" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/><path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"/></svg>-balance-for-open-source-maintainers.mdhttp://www.w3.org/2000/svg01281645{
+gh actions-importer update$ gh actions-importer update
+Login Succeeded
+latest: Pulling from actions-importer/cli
+Digest: sha256:a7d00dee8a37e25da59daeed44b1543f476b00fa2c41c47f48deeaf34a215bbb
+Status: Image is up to date for ghcr.io/actions-importer/cli:latest
+ghcr.io/actions-importer/cli:latestghcr.io/actions-importer/cli:latest$ gh actions-importer configure
+✔ Which CI providers are you configuring?: Travis CI
+Enter the following values (leave empty to omit):
+✔ Personal access token for GitHub: ***************
+✔ Base url of the GitHub instance: https://github.com
+✔ Personal access token for Travis CI: ***************
+✔ Base url of the Travis CI instance: https://travis-ci.com
+✔ Travis CI organization name: actions-importer-labs
+Environment variables successfully updated.https://github.com$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-importergh actions-importer version# Configure credentials for GitHub Actions Importer
+
+In this lab, you will use the `configure` CLI command to set the required credentials and information for GitHub Actions Importer to use when working with Travis CI and GitHub.
+
+You will need to complete all of the setup instructions [here](./readme.md#configure-your-codespace) prior to performing this lab.
+
+## Configuring credentials
+
+1. Create a GitHub personal access token (PAT):
+   - Open github.com in a new browser tab.
+   - In the top right corner of the UI, click your profile photo and then click `Settings`.
+   - In the left panel, click `Developer Settings`.
+   - Click `Personal access tokens` and then `Tokens (classic)` (if present).
+   - Click `Generate new token` and then `Generate new token (classic)`. You may be required to authenticate with GitHub during this step.
+   - Name your token in the `Note` field.
+   - Select the following scope: `workflow`.
+   - Click `Generate token`.
+   - Copy the generated PAT and save it in a safe location.
+
+3. Create a Travis CI personal access token (PAT):
+   - Open app.travis-ci.com in a new browser tab.
+   - Click on your profile icon in the top right corner to reveal a drop-down menu.
+   - Click `Settings`.
+   - Click the `Settings` tab.
+   - Under the "API authentication header, click the `COPY TOKEN` button and save it in a safe location.
+
+2. Run the `configure` CLI command:
+   - Select the `TERMINAL` tab from within the codespace terminal.
+   - Run the following command: `gh actions-importer configure`.
+   - Use the down arrow key to highlight `Travis CI`, press the spacebar to select, and then press enter to continue.
+   - At the GitHub PAT prompt, enter the GitHub PAT generated in step 2 and press enter.
+   - At the GitHub URL prompt, enter the GitHub instance URL or press enter to accept the default value (`https://github.com`).
+   - At the Travis CI token prompt, enter the Travis CI access token from step 2 and press enter.
+   - At the Travis CI base URL prompt, hit enter to accept the default value (`https://travis-ci.com`).
+   - At the Travis CI organization name, enter `actions-importer-labs`.
+
+      ```console
+      $ gh actions-importer configure
+      ✔ Which CI providers are you configuring?: Travis CI
+      Enter the following values (leave empty to omit):
+      ✔ Personal access token for GitHub: ***************
+      ✔ Base url of the GitHub instance: https://github.com
+      ✔ Personal access token for Travis CI: ***************
+      ✔ Base url of the Travis CI instance: https://travis-ci.com
+      ✔ Travis CI organization name: actions-importer-labs
+      Environment variables successfully updated.
+      ```
+
+## Verify your environment
+
+To verify your environment is configured correctly, you are going to run the `update` CLI command. The `update` CLI command will download the latest version of GitHub Actions Importer to your codespace.
+
+1. In the codespace terminal, run the following command:
+
+   ```bash
+   gh actions-importer update
+   ```
+
+2. You should see a confirmation that you were logged into the GitHub Container Registry and the image was updated to the latest version.
+
+   ```console
+   $ gh actions-importer update
+   Login Succeeded
+   latest: Pulling from actions-importer/cli
+   Digest: sha256:a7d00dee8a37e25da59daeed44b1543f476b00fa2c41c47f48deeaf34a215bbb
+   Status: Image is up to date for ghcr.io/actions-importer/cli:latest
+   ghcr.io/actions-importer/cli:latest
+   ```
+
+### Next lab
+
+[Perform an audit of a Travis CI organization](./2-audit.md)_articles/zh-hant/maintaining-balance-for-open-source-maintainers.md<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#659AD3" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/><path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"/></svg>-balance-for-open-source-maintainers.mdhttp://www.w3.org/2000/svg01281645{
   "name": "Codespace to perform GitHub Actions Importer Labs",
   "remoteEnv": {
     "DOCKER_ARGS": "--network=host",
