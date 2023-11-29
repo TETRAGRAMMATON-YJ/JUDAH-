@@ -1799,3 +1799,330 @@ Checkout V3 and run npm run publish:latest
 Draft a new release in GitHub and create new tag
 Click on Generate Change and only leave the link with difference. Paste in your changelog from PR.
 Check Set as the last release and publishkingdom hearts 
+
+-b, --branch <string>
+    repository branch
+--default-permissions
+    do not prompt to accept additional permissions requested by the codespace
+--devcontainer-path <string>
+    path to the devcontainer.json file to use when creating codespace
+-d, --display-name <string>
+    display name for the codespace
+--idle-timeout <duration>
+    allowed inactivity before codespace is stopped, e.g. "10m", "1h"
+-l, --location <string>
+    location: {EastUs|SouthEastAsia|WestEurope|WestUs2} (determined automatically if not provided)
+-m, --machine <string>
+    hardware specifications for the VM
+-R, --repo <string>
+    repository name with owner: user/repo
+--retention-period <duration>
+    allowed time after shutting down before the codespace is automatically deleted (maximum 30 days), e.g. "1h", "72h"
+-s, --status
+    show status of post-create command and dotfiles
+-w, --web
+    create codespace from browser, cannot be used with --display-name, --idle-timeout, or --retention-period devcontainer.json30opencode@microsoft.comCommunity leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+
+Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+Scope
+
+This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+
+This Code of Conduct also applies to actions taken outside of these spaces, and which have a negative impact on community health.
+Enforcement and Reporting
+
+We encourage all communities to resolve issues on their own whenever possible. Instances of abusive, harassing, or otherwise unacceptable behavior should be reported to the community leaders responsible for enforcement in a given project or to opencode@microsoft.com. If you are a Microsoft employee looking for support, please use the Community 911 reporting process.
+
+Your report will be handled in accordance with the issue resolution process described in the Code of Conduct FAQ. All project and community leaders are obligated to respect the privacy and security of the reporter of any incident.
+Attribution
+
+This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+
+Community Impact Guidelines were inspired by Mozilla's code of conduct enforcement ladder.
+
+Expanding scope to include external impact on community health inspired by Facebook's Open Source Code of Conduct and Mozilla's Community Participation Guidelines.
+
+For answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
+
+    Twitter icon OpenAtMicrosoft
+    GitHub icon microsoft/opensource.microsoft.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+911https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.https://www.contributor-covenant.org/faq., e.g., cat-2.png
+### Image 3: <image>       % some image, e.g., cat-3.png
+### Question: <question>   % What's the difference between the three cats?
+### Answer: <answer>       % The colors of the three cats are different.
+...
+The training experience of DeepSpeed-VisualChat is straightforward and convenient. Here we give an example based on the CLIP visual encoder and the LLaMa-7B model:
+
+git clone https://github.com/microsoft/DeepSpeedExamples.git
+cd DeepSpeedExamples/applications/DeepSpeed-VisualChat/
+pip install -r requirements.txt
+cd training
+bash training_scripts/run_7b.sh
+The trained checkpoint will be automatically saved in a Hugging Face-compatible version and can be used to launch your own visual chat API:
+
+cd ../chat
+bash chat_scripts/run.sh # You need to change necessary variables, e.g, ckpt path
+To support larger model inference, we have incorporated Hugging Face large model inference into our DeepSpeed-VisualChat API. Therefore, users can choose a different number of GPUs based on the GPU memory capacity and the model size.
+
+Please refer to our GitHub Landing Page for more details.
+
+7. Release: Try DeepSpeed-VisualChat today!
+We are very excited to share that DeepSpeed-VisualChat is now open-sourced and available to the AI community.
+
+To get started, please visit our GitHub page for DeepSpeed-VisualChat: GitHub Landing Page
+
+We will continue to improve DeepSpeed-VisualChat with your feedback and support. Our roadmap shows currently supported features as well as ones that are planned for the future.
+
+DeepSpeed-VisualChat is a component of the larger DeepSpeed ecosystem, which includes a range of Deep Learning systems and modeling technologies. To learn more,
+
+Please visit our website for detailed blog posts, tutorials, and helpful documentation.
+Follow us on our English X(Twitter), Japanese X(Twitter), and Chinese Zhihu for latest news on DeepSpeed.
+We welcome your contributions to DeepSpeed! We encourage you to report issues, contribute PRs, and join discussions on the DeepSpeed GitHub page. Please see our contributing guide for more details. We are open to collaborations with universities, research labs, companies, such as those working together on deep learning research, applying DeepSpeed to empower real-world AI models and applications, and so on. For such requests (and other requests unsuitable for GitHub), please directly email to deepspeed-info@microsoft.com.
+
+"Star" our DeepSpeed GitHub and DeepSpeedExamples GitHub https://www.contributor-covenant.org/translations.cat-2.pngcat-3.pnghttps://github.com/microsoft/DeepSpeedExamples.gitrequirements.txtdeepspeed-info@microsoft.com  title={{DeepSpeed-VisualChat: Multi-Round Multi-Image Interleave Chat via Multi-Modal Causal Attention}},
+  author={Zhewei Yao and Xiaoxia Wu and Conglong Li and Minjia Zhang and Heyang Qin and Olatunji Ruwase and Ammar Ahmad Awan and Samyam Rajbhandari and Yuxiong He},
+  journal={arXiv preprint arXiv:2309.14327},
+  year={2023}
+}
+1. Overview
+Large Language models (LLMs), such as GPT and LLaMa, have showcased exceptional prowess in a myriad of text generation and comprehension tasks, especially when subjected to zero-/few-shot learning, particularly after instructed fine-tuning. However, to equip AI agents for diverse tasks, one critical feature that needs to be incorporated is multi-modal capability; for instance, the AI agent should be able to read images, hear voices, watch videos, etc. This capability is largely absent in solely text-based LLMs.
+
+Recently, one of the research/practice mainstreams has begun exploring the incorporation of visual capability into LLMs, especially enabling LLMs to understand images by inserting raw pictures (referred to as large visual language models, or LVLMs in short).
+
+The main caveats of the majority of existing works are:
+
+The focus is predominantly on tasks related to a single image, such as visual question answering and captioning, or on handling multiple images that require concurrent input. Neither approach adeptly manages interleaved image-and-text input.
+The scalability of the system is limited to models with ~10B parameters, which is about an order of magnitude smaller than largest open-sourced models.
+However, for a genuine AI chat agent, the content of inputs could be multiple images interleaved with text, a situation rarely addressed by current works. Also, the generation capability of LLMs grows quickly as the model size increases. Therefore, focusing system capability on ~10B models limits further exploration of the potential of LVLMs.
+
+To resolve these issues, we are introducing DeepSpeed-VisualChat (see arxiv report for more details) with the following new features:
+
+Fully Open-Sourced Multi-round Multi-image Framework with Unprecedented Scalability: DeepSpeed-VisualChat, one of the pioneering fully open-sourced frameworks, enables multi-round and multi-image dialogues, accommodating interleaved text-and-image inputs. We leverage DeepSpeed to enhance our training with a 2B visual encoder and a 70B LLaMA-2 decoder model, illustrating the remarkable scalability of our framework.
+Multi-Modal Causal Attention (MMCA) We devise a novel MMCA for multi-modal models that computes attention weights independently across various modalities. MMCA achieves objectives analogous to conventional cross-attention mechanisms but offers enhanced causal attention interpretations for generative tasks, eliminating the need for additional modules or parameters. It also presents superior training data efficiency compared to standard causal attention.
+Data Blending for Interleaved Inputs To facilitate conversations with interleaved modalities, DeepSpeed-VisualChat employs assorted data blending techniques on existing datasets, overcoming the shortage of interleaved text-and-image inputs in most available open-source datasets.
+2 Model architecture overview
+ dependencies
+Run npm install and verify if everything still works correctly
+Merge your feature branch into V3
+Create a new branch from V3 and name it with the version tag
+Run npm run pre-publish and set new custom version
+Update version in ConstantsUtil in @web3modal/scaffold-utils to the correct version
+Create a new PR with Release Notes and merge into V3
+Checkout V3 and run npm run publish:latest
+Draft a new release in GitHub and create new tag
+Click on Generate Change and only leave the link with difference. Paste in your changelog from PR.
+Check Set as the last release and publishkingdom hearts 
