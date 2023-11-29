@@ -2799,6 +2799,12 @@ equations 2} from:/utis|s/equations;
 const result1+1=equation1 (x);
 console.log(result1);//output's the
 results of 3 first equation for x=2,y=3
+ser = User.find_by_username('automation-bot')
+token = user.personal_access_tokens.create(scopes: ['read_user', 'read_repository'], name: 'Automation token', expires_at: 365.days.from_now)
+token.set_token('token-string-here123')
+token.save!
+sudo gitlab-rails runner "token = User.find_by_username('automation-bot').personal_access_tokens.create(scopes: ['read_user', 'read_repository'], name: 'Automation token', expires_at: 365.days.from_now); token.set_token('token-string-here123'); token.save!"
+https://gitlab.example.com/-/profile/personal_access_tokens?name=Example+Access+token&scopes=api,read_user,read_registry./gitlab/bootstrap/setup.sh./jenkins/bootstrap/setup.shhttps://gitlab.example.com/-/profile/personal_access_tokens?name=Example+Access+token&scopes=api,read_user,read_registrykingdom hearts 
 
 
 
