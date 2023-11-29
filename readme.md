@@ -1093,3 +1093,511 @@ Make sure that compiled libraries match the current version of RocksDB. One way 
     "@coinbase/wallet-sdk": "^3.0.0"
   }
 }npm outdated @coinbase/wallet-sdkyarn list @coinbase/wallet-sdkkingdom hearts 
+Describe the bug**
+A clear and concise description of what the bug is.
+
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
+
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
+
+**Additional context**
+Add any other context about the problem here.
+Start a new codespace
+
+Click the Code button on your repository's landing page.
+Click the Codespaces tab.
+Click Create codespaces on main to create the codespace.
+After the codespace has initialized there will be a terminal present.
+Verify the GitHub Actions Importer CLI is installed and working. More information on the GitHub Actions Importer extension for the official GitHub CLI can be found here.
+
+Run the following command in the codespace terminal:
+
+gh actions-importer version
+Verify the output is similar to below.
+
+$ gh actions-importer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       unknown
+If gh actions-importer version did not produce similar output, please refer to the troubleshooting section.
+
+Bootstrap a GitLab server
+Execute the GitLab setup script that will start a container with GitLab running inside of it. The script should be executed when starting a new codespace or restarting an existing one.
+
+Run the following command from the codespace terminal:
+
+./gitlab/bootstrap/setup.sh
+After some time, a pop-up box should appear with a link to the URL for your GitLab server.
+
+You can also access the URL by going to the Ports tab in your terminal. Right-click the URL listed under the Local Address and click the Open in Browser tab.
+
+Open the GitLab server in your browser and use the following credentials to authenticate:
+
+Username: root
+Password: actions-importer-labs!
+Once authenticated, you should see a GitLab server with a few predefined pipelines in the actions-importer group.
+
+Labs for GitLab
+Perform the following labs to learn more about Actions migrations with GitHub Actions Importer:
+
+Configure credentials for GitHub Actions Importer
+Perform an audit on GitLab pipelines
+Forecast potential build runner usage
+Perform a dry-run migration of a GitLab pipeline
+Use custom transformers to customize GitHub Actions Importer's behavior
+Perform a production migration of a GitLab pipeline
+Troubleshoot the GitHub Actions Importer CLI
+The CLI extension for GitHub Actions Importer can be manually installed by following these steps:
+
+Verify you are in the codespace terminal
+
+Run this command from within the codespace terminal:
+
+gh extension install github/gh-actions-importer
+Verify the result of the install contains:
+
+$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-importer
+Verify GitHub Actions Importer CLI extension is installed and working by running the following command from the codespace terminal:
+
+gh actions-importer version
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
+
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
+
+**Additional context**
+Add any other context about the problem here.**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
+
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
+
+**Additional context**
+Add any other context or screenshots about the feature request here.https://github.com/bradford80USA/unamed/actions/workflows/azure-container-webapp.yml1998350Program Overview
+Privileges of Membership
+Over 1300 organizations and individuals parti-
+cipate in the JCP program. While there are no
+obligatory duties, members have the opportunity
+to influence the evolution of Java technology
+through the development of Java Specification
+Requests (JSR).
+Members can license their Java specifications
+under a variety of licenses, including open source
+options. Anyone must be able to create an indepen-
+dent implementation as long as they license and pass the
+TCK to ensure compatibility. Members must also
+make the option available to license the TCK and
+RI separately. In addition, individuals, educational
+organizations, and qualified nonprofits must have
+access to the TCKs free of charge.
+Successful Members:
+• Review proposed JSRs and drafts
+• Submit JSRs
+• Nominate themselves or others to serve
+on Expert Groups, which create or revise
+specifications
+• Build independent implementations
+• Vote on EC membership ballots
+• Nominate themselves for an EC seat
+Members of an Expert Group may also:
+• Serve as the Specification Lead of an
+Expert Group
+• Select others to join their Expert Group
+• Use feedback from members and the public
+to improve the quality of a specification
+• Complete a specification, its RI, and its
+associated TCK
+• Maintain a specification after it is written
+How to Become a Member
+A person or organization can become a member
+by signing the Java Specification Participation
+Agreement (JSPA). This agreement between an
+organization or individual and Oracle establishes
+each member’s rights and obligations when partici-
+pating in the JCP program. To cover costs, the JSPA
+charges a nominal fee for commercial entities, but it
+is free for Java User Groups and individuals.
+The Java Specification Review Process
+Currently, over 350 JSRs are in development.
+A specification follows four major steps as it
+progresses through the process, as shown in
+the timeline.
+1. INITIATION: A specification is initiated by one or
+more members and approved for development
+by the Executive Committee.
+2. EARLY DRAFT: A group of experts is formed to
+draft the specification for the public, community
+and the Executive Committee to review. The
+Expert Group uses feedback from the review to
+revise the specification.
+3. PUBLIC DRAFT: The draft is posted on the Internet
+for a second review by the public. The Expert
+Group uses the feedback to refine the document.
+The Executive Committee decides if the draft
+should proceed to the next step. The Specification
+Lead ensures that the RI and its associated TCK
+are completed before sending the specification to
+the Executive Committee for final approval.
+Java Community Process Program Overview
+The Java Community Process (JCP) program is the formalization of the open, inclusive
+process that has been used since 1998 to develop and revise Java technology specifications,
+reference implementations (RI), and technology compatibility kits (TCK). Jav1300https://github.com/bradford80USA/unamed/actions/workflows/azure-container-webapp.yml1998350Program13003501998
+-b, --branch <string>
+    repository branch
+--default-permissions
+    do not prompt to accept additional permissions requested by the codespace
+--devcontainer-path <string>
+    path to the devcontainer.json file to use when creating codespace
+-d, --display-name <string>
+    display name for the codespace
+--idle-timeout <duration>
+    allowed inactivity before codespace is stopped, e.g. "10m", "1h"
+-l, --location <string>
+    location: {EastUs|SouthEastAsia|WestEurope|WestUs2} (determined automatically if not provided)
+-m, --machine <string>
+    hardware specifications for the VM
+-R, --repo <string>
+    repository name with owner: user/repo
+--retention-period <duration>
+    allowed time after shutting down before the codespace is automatically deleted (maximum 30 days), e.g. "1h", "72h"
+-s, --status
+    show status of post-create command and dotfiles
+-w, --web
+    create codespace from browser, cannot be used with --display-name, --idle-timeout, or --retention-period 30Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+
+Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+Scope
+
+This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+
+This Code of Conduct also applies to actions taken outside of these spaces, and which have a negative impact on community health.
+Enforcement and Reporting
+
+We encourage all communities to resolve issues on their own whenever possible. Instances of abusive, harassing, or otherwise unacceptable behavior should be reported to the community leaders responsible for enforcement in a given project or to opencode@microsoft.com. If you are a Microsoft employee looking for support, please use the Community 911 reporting process.
+
+Your report will be handled in accordance with the issue resolution process described in the Code of Conduct FAQ. All project and community leaders are obligated to respect the privacy and security of the reporter of any incident.
+Attribution
+
+This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+
+Community Impact Guidelines were inspired by Mozilla's code of conduct enforcement ladder.
+
+Expanding scope to include external impact on community health inspired by Facebook's Open Source Code of Conduct and Mozilla's Community Participation Guidelines.
+
+For answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
+
+    Twitter icon OpenAtMicrosoft
+    GitHub icon microsoft/opensource.microsoft.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+opencode@microsoft.com911https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.https://www.contributor-covenant.org/faq.https://www.contributor-covenant.org/translations., e.g., cat-2.png
+### Image 3: <image>       % some image, e.g., cat-3.png
+### Question: <question>   % What's the difference between the three cats?
+### Answer: <answer>       % The colors of the three cats are different.
+...
+The training experience of DeepSpeed-VisualChat is straightforward and convenient. Here we give an example based on the CLIP visual encoder and the LLaMa-7B model:
+
+git clone https://github.com/microsoft/DeepSpeedExamples.git
+cd DeepSpeedExamples/applications/DeepSpeed-VisualChat/
+pip install -r requirements.txt
+cd training
+bash training_scripts/run_7b.sh
+The trained checkpoint will be automatically saved in a Hugging Face-compatible version and can be used to launch your own visual chat API:
+
+cd ../chat
+bash chat_scripts/run.sh # You need to change necessary variables, e.g, ckpt path
+To support larger model inference, we have incorporated Hugging Face large model inference into our DeepSpeed-VisualChat API. Therefore, users can choose a different number of GPUs based on the GPU memory capacity and the model size.
+
+Please refer to our GitHub Landing Page for more details.
+
+7. Release: Try DeepSpeed-VisualChat today!
+We are very excited to share that DeepSpeed-VisualChat is now open-sourced and available to the AI community.
+
+To get started, please visit our GitHub page for DeepSpeed-VisualChat: GitHub Landing Page
+
+We will continue to improve DeepSpeed-VisualChat with your feedback and support. Our roadmap shows currently supported features as well as ones that are planned for the future.
+
+DeepSpeed-VisualChat is a component of the larger DeepSpeed ecosystem, which includes a range of Deep Learning systems and modeling technologies. To learn more,
+
+Please visit our website for detailed blog posts, tutorials, and helpful documentation.
+Follow us on our English X(Twitter), Japanese X(Twitter), and Chinese Zhihu for latest news on DeepSpeed.
+We welcome your contributions to DeepSpeed! We encourage you to report issues, contribute PRs, and join discussions on the DeepSpeed GitHub page. Please see our contributing guide for more details. We are open to collaborations with universities, research labs, companies, such as those working together on deep learning research, applying DeepSpeed to empower real-world AI models and applications, and so on. For such requests (and other requests unsuitable for GitHub), please directly email to deepspeed-info@microsoft.com.
+
+"Star" our DeepSpeed GitHub and DeepSpeedExamples GitHub cat-2.pngcat-3.pnghttps://github.com/microsoft/DeepSpeedExamples.gitrequirements.txt  title={{DeepSpeed-VisualChat: Multi-Round Multi-Image Interleave Chat via Multi-Modal Causal Attention}},
+  author={Zhewei Yao and Xiaoxia Wu and Conglong Li and Minjia Zhang and Heyang Qin and Olatunji Ruwase and Ammar Ahmad Awan and Samyam Rajbhandari and Yuxiong He},
+  journal={arXiv preprint arXiv:2309.14327},
+  year={2023}
+}
+1. Overview
+Large Language models (LLMs), such as GPT and LLaMa, have showcased exceptional prowess in a myriad of text generation and comprehension tasks, especially when subjected to zero-/few-shot learning, particularly after instructed fine-tuning. However, to equip AI agents for diverse tasks, one critical feature that needs to be incorporated is multi-modal capability; for instance, the AI agent should be able to read images, hear voices, watch videos, etc. This capability is largely absent in solely text-based LLMs.
+
+Recently, one of the research/practice mainstreams has begun exploring the incorporation of visual capability into LLMs, especially enabling LLMs to understand images by inserting raw pictures (referred to as large visual language models, or LVLMs in short).
+
+The main caveats of the majority of existing works are:
+
+The focus is predominantly on tasks related to a single image, such as visual question answering and captioning, or on handling multiple images that require concurrent input. Neither approach adeptly manages interleaved image-and-text input.
+The scalability of the system is limited to models with ~10B parameters, which is about an order of magnitude smaller than largest open-sourced models.
+However, for a genuine AI chat agent, the content of inputs could be multiple images interleaved with text, a situation rarely addressed by current works. Also, the generation capability of LLMs grows quickly as the model size increases. Therefore, focusing system capability on ~10B models limits further exploration of the potential of LVLMs.
+
+To resolve these issues, we are introducing DeepSpeed-VisualChat (see arxiv report for more details) with the following new features:
+
+Fully Open-Sourced Multi-round Multi-image Framework with Unprecedented Scalability: DeepSpeed-VisualChat, one of the pioneering fully open-sourced frameworks, enables multi-round and multi-image dialogues, accommodating interleaved text-and-image inputs. We leverage DeepSpeed to enhance our training with a 2B visual encoder and a 70B LLaMA-2 decoder model, illustrating the remarkable scalability of our framework.
+Multi-Modal Causal Attention (MMCA) We devise a novel MMCA for multi-modal models that computes attention weights independently across various modalities. MMCA achieves objectives analogous to conventional cross-attention mechanisms but offers enhanced causal attention interpretations for generative tasks, eliminating the need for additional modules or parameters. It also presents superior training data efficiency compared to standard causal attention.
+Data Blending for Interleaved Inputs To facilitate conversations with interleaved modalities, DeepSpeed-VisualChat employs assorted data blending techniques on existing datasets, overcoming the shortage of interleaved text-and-image inputs in most available open-source datasets.
+2 Model architecture overview
+deepspeed-info@microsoft.com2kingdom hearts 
