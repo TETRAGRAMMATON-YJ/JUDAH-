@@ -1,4 +1,11 @@
-It seems like you're referring to two separate equations. If you want to implement these in JavaScript, you can create functions like this:
+const appCheckClaims = await getAppCheck().verifyToken(appCheckToken, { consume: true });
+
+if (appCheckClaims.alreadyConsumed) {
+    res.status(401);
+    return next('Unauthorized');
+}
+
+// If verifyToken() succeeds and alreadyConsumed is not set, okay to continue.kingdom hearts It seems like you're referring to two separate equations. If you want to implement these in JavaScript, you can create functions like this:
 
 ```javascript
 // src/utils/equations.js
