@@ -96,7 +96,13 @@ The CLI extension for GitHub Actions Importer can be manually installed by follo
 
 - Verify the result of the install contains:
 
-  ```console
+  ```consolegh extension install github/gh-actions-importergh extension install github/gh-actions-importer$ gh actions-importer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       ./azure_devops/bootstrap/setup --$ gh actions-importer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       
   $ gh extension install github/gh-actions-importer
   ✓ Installed extension github/gh-actions-importer
   ```
@@ -106,3 +112,7 @@ The CLI extension for GitHub Actions Importer can be manually installed by follo
   ```bash
   gh actions-importer version
   ```
+gh actions-importer version:
+
+$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-
