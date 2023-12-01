@@ -1,4 +1,4 @@
-cdeb2636317dcf35a8dd12efc7c6e434aaa47ae3yarn install
+kingdom hearts cdeb2636317dcf35a8dd12efc7c6e434aaa47ae3yarn install
 
 # To start the development server run the following command. This starts a nextjs app on port 3001. Any changes in the SDK become available through the app.
 yarn dev
