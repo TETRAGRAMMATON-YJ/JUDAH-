@@ -1,4 +1,227 @@
-# Using custom transformers to customize GitHub Actions Importer's behavior
+# Perform a production migration of a GitLab pipeline
+
+In this lab, you will use the `migrate` command to convert a GitLab pipeline and open a pull request with the equivalent Actions workflow.
+
+## Prerequisites
+
+1. Followed the steps [here](./readme.md#configure-your-codespace) to set up your GitHub Codespaces environment and start a GitLab server.
+2. Completed the [configure lab](./1-configure.md#configuring-credentials).
+3. Completed the [dry-run lab](./4-dry-run.md).
+
+## Performing a migration
+
+Answer the following questions before running a `migrate` command:
+
+1. What project do you want to migrate?
+    - __rails-example__
+2. What is the namespace for that project?
+    - __actions-importer__
+3. Where do you want to store the logs?
+    - __tmp/migrate__
+4. What is the URL for the GitHub repository to add the workflow to?
+    - __this repository__. The URL should should follow the pattern <https://github.com/:owner/:repo> with `:owner` and `:repo` replaced with your values.
+
+### Steps
+
+1. Run the following `migrate` command in the codespace terminal:
+
+    ```bash
+    gh actions-importer migrate gitlab --target-url https://github.com/:owner/:repo --output-dir tmp/migrate --namespace actions-importer --project rails-example
+    ```
+
+2. The command will write the URL to the pull request that was created when the command succeeds.
+
+    ```console
+    $ gh actions-importer migrate gitlab --target-url https://github.com/:owner/:repo --output-dir tmp/migrate
+    [2022-08-20 22:08:20] Logs: 'tmp/migrate/log/actions-importer-20220916-014033.log'
+    [2022-08-20 22:08:20] Pull request: 'https://github.com/:owner/:repo/pull/1'
+    ```
+
+3. Open the generated pull request in a new browser tab.
+
+### Inspect the pull request
+
+The first thing to notice about the pull request is that there is a list of manual steps to complete.
+
+Next, you can inspect the "Files changed" in this pull request and see the converted workflow that is being added. Any additional changes or code reviews that were needed should be done in this pull request.
+
+Finally, you can merge the pull request once your review has completed. You can then view the workflow running by selecting the "Actions" menu in the top navigation bar in GitHub.
+
+![img](https://user-images.githubusercontent.com/18723510/184960870-590b1a28-422f-4350-9ec0-0423bf7ad445.png)
+
+At this point, the migration has completed and you have successfully migrated a GitLab pipeline to Actions!
+
+### Next Lab
+
+This concludes all labs for migrating GitLab pipelines to Actions with GitHub Actions Importer!-configure.md#configuring-credentialshttps://github.com/:owner/:repo-dry-run.md2022-08-20 22:08:2020220916-0140https://github.com/:owner/:repohttps://github.com/:owner/:repo/pull/1https://user-images.githubusercontent.com/18723510/184960870-590b1a28-422f-4350-9ec0-0423bf7ad445.png# Using custom transformers to customize GitHub Actions Importer's behavior
+
+In this lab we will build upon the `dry-run` command to override GitHub Actions Importer's default behavior and customize the converted workflow using "custom transformers". Custom transformers can be used to:
+
+1. Convert items that are not automatically converted.
+2. Convert items that were automatically converted using different actions.
+3. Convert environment variable values differently.
+4. Convert references to runners to use a different runner name in Actions.
+
+## Prerequisites
+
+1. Followed the steps [here](./readme.md#configure-your-codespace) to set up your GitHub Codespaces environment and bootstrap an Azure DevOps project.
+2. Completed the [configure lab](./1-configure.md#configuring-credentials).
+3. Completed the [audit lab](./2-audit.md).
+4. Completed the [dry-run lab](./4-dry-run.md).
+
+## Perform a dry run
+
+You will perform a dry-run for a pipeline in the bootstrapped Azure DevOps project. Answer the following questions before running this command:
+
+1. What is the id of the pipeline to convert?
+    - __:pipeline_id__. This id can be found by:
+      - Navigating to the build pipelines in the bootstrapped Azure DevOps project <https://dev.azure.com/:organization/:project/_build>
+      - Selecting the pipeline with the name "custom-transformer-example"
+      - Inspecting the URL to locate the pipeline id <https://dev.azure.com/:organization/:project/_build?definitionId=:pipeline_id>
+
+2. Where do you want to store the result?
+    - __tmp/dry-run__. This can be any path within the working directory from which GitHub Actions Importer commands are executed.
+
+### Steps
+
+1. Navigate to the codespace terminal
+2. Run the following command from the root directory:
+
+    ```bash
+    gh actions-importer dry-run azure-devops pipeline --pipeline-id :pipeline_id --output-dir tmp/dry-run
+    ```
+
+3. The command will list all the files written to disk when the command succeeds.
+4. View the converted workflow:
+    - Find `tmp/dry-run/pipelines/lab-testing/pipelines/custom-transformer-example/.github/workflows` in the file explorer pane in your codespace.
+    - Click `custom-transformer-example.yml` to open.
+
+The converted workflow that is generated can be seen below:
+
+<details>
+  <summary><em>Converted workflow 👇</em></summary>
+
+```yaml
+name: actions-importer-bootstrap/pipelines/custom-transformer-example
+on:
+  push:
+    branches:
+    - "*"
+env:
+  BUILDCONFIGURATION: Release
+  BuildParameters_RESTOREBUILDPROJECTS: "**/*.csproj"
+jobs:
+  Job_1:
+    name: Agent job 1
+    runs-on:
+      - self-hosted
+      - mechamachine
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    - name: Use Node 10.16.3
+      uses: actions/setup-node@v2
+      with:
+        node-version: 10.16.3
+    - name: Restore
+      run: dotnet restore ${{ env.BuildParameters_RESTOREBUILDPROJECTS }}
+    - name: Build
+      run: dotnet build ${{ env.BuildParameters_RESTOREBUILDPROJECTS }} --configuration ${{ env.BUILDCONFIGURATION }}
+```
+
+</details>
+
+_Note_: You can refer to the previous [lab](./4-dry-run.md) to learn about the fundamentals of the `dry-run` command.
+
+## Custom transformers for build steps
+
+You can use custom transformers to override GitHub Actions Importer's default behavior. In this scenario, you may want to override the behavior for converting `DotnetCoreCLI@2` tasks to support parameters that are glob patterns. Answer the following questions before writing a custom transformer:
+
+1. What is the "identifier" of the step to customize?
+    - __DotnetCoreCLI@2__
+
+2. What is the desired Actions syntax to use instead?
+      - After some research, you have determined that the following script will provide the desired functionality:
+
+      ```yaml
+        - run: shopt -s globstar; for f in ./**/*.csproj; do dotnet build $f --configuration ${{ env.BUILDCONFIGURATION }} ; done
+          shell: bash
+      ```
+
+Now you can begin to write the custom transformer. Custom transformers use a DSL built on top of Ruby and should be defined in a file with the `.rb` file extension. You can create this file by running the following command in your codespace terminal:
+
+```bash
+touch transformers.rb && code transformers.rb
+```
+
+To build this custom transformer, you first need to inspect the `item` keyword to programmatically obtain the projects, command, and arguments to use in the `DotNetCoreCLI@2` step.
+
+To do this, you will print `item` to the console. You can achieve this by adding the following custom transformer to `transformers.rb`:
+
+```ruby
+transform "DotNetCoreCLI@2" do |item|
+  puts "This is the item: #{item}"
+end
+```
+
+The `transform` method can use any valid ruby syntax and should return a `Hash` that represents the YAML that should be generated for a given step. GitHub Actions Importer will use this method to convert a step with the provided identifier and will use the `item` parameter for the original values configured in Azure DevOps.
+
+Now, you can perform a `dry-run` command with the `--custom-transformers` CLI option. The output of the `dry-run` command should look similar to this:
+
+```console
+$ gh actions-importer dry-run azure-devops pipeline --pipeline-id 6 --output-dir tmp/dry-run --custom-transformers transformers.rb
+[2022-09-20 18:39:50] Logs: 'tmp/dry-run/log/actions-importer-20220920-183950.log'         
+This is the item: {"command"=>"restore", "projects"=>"$(BuildParameters.RESTOREBUILDPROJECTS)"}
+This is the item: {"projects"=>"$(BuildParameters.RESTOREBUILDPROJECTS)", "arguments"=>"--configuration $(BUILDCONFIGURATION)"}
+[2022-09-20 18:39:51] Output file(s):
+[2022-09-20 18:39:51]   tmp/dry-run/pipelines/lab-testing/pipelines/custom-transformer-example/.github/workflows/custom-transformer-example.yml
+```
+
+In the above command you will see two instances of `item` printed to the console. This is because there are two `DotNetCoreCLI@2` steps in the pipeline. Each item listed above represents each `DotNetCoreCLI@2` step in the order that they are defined in the pipeline.-audit.mdhttps://dev.azure.com/:organization/:project/_buildhttps://dev.azure.com/:organization/:project/_build?definitionId=:pipeline_id1transformers.rbenv.BUILDCONFIGURATION62022-09-20 18:39:5020220920-18392022-09-20 18:39:51 Job count: **84**
+- Pipeline count: **32**
+
+- Execution time
+
+  - Total: **82 minutes**
+  - Median: **0 minutes**
+  - P90: **2 minutes**
+  - Min: **0 minutes**
+  - Max: **4 minutes**
+
+- Queue time
+
+  - Median: **0 minutes**
+  - P90: **1 minutes**
+  - Min: **0 minutes**
+  - Max: **5 minutes**
+
+- Concurrent jobs
+
+  - Median: **0**
+  - P90: **0**
+  - Min: **0**
+  - Max: **5**gh actions-importer forecast azure-devops --output-dir tmp/forecast --source-file-path azure_devops/bootstrap/jobs.json
+[2022-08-20 22:08:20] Logs: 'tmp/forecast/log/actions-importer-20220916-021004.log'
+[2022-08-20 22:08:20] Forecasting 'http://dev.azure.com/mona/actions-bootstrap/_build'
+[2022-08-20 22:08:20] Outfile file(s):
+[2022-08-20 22:08:20]   ./tmp/forec20220916-0210http://dev.azure.com/mona/actions-bootstrap/_build$ gh actions-importer forecast azure-devops -h
+Options:
+  -g, --azure-devops-organization <azure-devops-organization>  The Azure DevOps organization name.
+  -p, --azure-devops-project <azure-devops-project>            The Azure DevOps project name.
+  -u, --azure-devops-instance-url <azure-devops-instance-url>  The URL of the Azure DevOps instance.
+  -t, --azure-devops-access-token <azure-devops-access-token>  Access token for the Azure DevOps instance.
+  --source-file-path <source-file-path>                        The file path(s) to existing jobs data.
+  -o, --output-dir <output-dir> (REQUIRED)                     The location for any output files.
+  --start-date <start-date>                                    The start date of the forecast analysis in YYYY-MM-DD format. [default:
+                                                               10/31/2022 8:35:17 AM]
+  --time-slice <time-slice>                                    The time slice in seconds to use for computing concurrency metrics.
+                                                               [default: 60]
+  --credentials-file <credentials-file>                        The file containing the credentials to use.
+  --no-telemetry                                               Boolean value to disallow telemetry.
+  --no-ssl-verify                                              Disable ssl certificate verification.
+  --no-http-cache                                              Disable caching of http responses.
+  -?, -h, --help              10/31/2022 8:35:17 AMkingdom hearts # Using custom transformers to customize GitHub Actions Importer's behavior
 
 In this lab we will build upon the `dry-run` command to override GitHub Actions Importer's default behavior and customize the converted workflow using "custom transformers". Custom transformers can be used to:
 
