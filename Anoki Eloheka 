@@ -320,3 +320,516 @@ gh actions-importer version:
 
 $ gh extension install github/gh-actions-importer
 ✓ Installed extension github/gh-actions-gh extension install github/gh-actions-importerkingdom hearts 
+**Describe the bug**
+A clear and concise description of what the bug is.
+
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
+
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
+
+**Additional context**
+Add any other context about the problem here.
+Start a new codespace
+
+Click the Code button on your repository's landing page.
+Click the Codespaces tab.
+Click Create codespaces on main to create the codespace.
+After the codespace has initialized there will be a terminal present.
+Verify the GitHub Actions Importer CLI is installed and working. More information on the GitHub Actions Importer extension for the official GitHub CLI can be found here.
+
+Run the following command in the codespace terminal:
+
+gh actions-importer version
+Verify the output is similar to below.
+
+$ gh actions-importer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       unknown
+If gh actions-importer version did not produce similar output, please refer to the troubleshooting section.
+
+Bootstrap a GitLab server
+Execute the GitLab setup script that will start a container with GitLab running inside of it. The script should be executed when starting a new codespace or restarting an existing one.
+
+Run the following command from the codespace terminal:
+
+./gitlab/bootstrap/setup.sh
+After some time, a pop-up box should appear with a link to the URL for your GitLab server.
+
+You can also access the URL by going to the Ports tab in your terminal. Right-click the URL listed under the Local Address and click the Open in Browser tab.
+
+Open the GitLab server in your browser and use the following credentials to authenticate:
+
+Username: root
+Password: actions-importer-labs!
+Once authenticated, you should see a GitLab server with a few predefined pipelines in the actions-importer group.
+
+Labs for GitLab
+Perform the following labs to learn more about Actions migrations with GitHub Actions Importer:
+
+Configure credentials for GitHub Actions Importer
+Perform an audit on GitLab pipelines
+Forecast potential build runner usage
+Perform a dry-run migration of a GitLab pipeline
+Use custom transformers to customize GitHub Actions Importer's behavior
+Perform a production migration of a GitLab pipeline
+Troubleshoot the GitHub Actions Importer CLI
+The CLI extension for GitHub Actions Importer can be manually installed by following these steps:
+
+Verify you are in the codespace terminal
+
+Run this command from within the codespace terminal:
+
+gh extension install github/gh-actions-importer
+Verify the result of the install contains:
+
+$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-importer
+Verify GitHub Actions Importer CLI extension is installed and working by running the following command from the codespace terminal:
+
+gh actions-importer version
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
+
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
+
+**Additional context**
+Add any other context about the problem here.**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
+
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
+
+**Additional context**
+Add any other context or screenshots about the feature request here.https://github.com/bradford80USA/unamed/actions/workflows/azure-container-webapp.yml1998350Program Overview
+Privileges of Membership
+Over 1300 organizations and individuals parti-
+cipate in the JCP program. While there are no
+obligatory duties, members have the opportunity
+to influence the evolution of Java technology
+through the development of Java Specification
+Requests (JSR).
+Members can license their Java specifications
+under a variety of licenses, including open source
+options. Anyone must be able to create an indepen-
+dent implementation as long as they license and pass the
+TCK to ensure compatibility. Members must also
+make the option available to license the TCK and
+RI separately. In addition, individuals, educational
+organizations, and qualified nonprofits must have
+access to the TCKs free of charge.
+Successful Members:
+• Review proposed JSRs and drafts
+• Submit JSRs
+• Nominate themselves or others to serve
+on Expert Groups, which create or revise
+specifications
+• Build independent implementations
+• Vote on EC membership ballots
+• Nominate themselves for an EC seat
+Members of an Expert Group may also:
+• Serve as the Specification Lead of an
+Expert Group
+• Select others to join their Expert Group
+• Use feedback from members and the public
+to improve the quality of a specification
+• Complete a specification, its RI, and its
+associated TCK
+• Maintain a specification after it is written
+How to Become a Member
+A person or organization can become a member
+by signing the Java Specification Participation
+Agreement (JSPA). This agreement between an
+organization or individual and Oracle establishes
+each member’s rights and obligations when partici-
+pating in the JCP program. To cover costs, the JSPA
+charges a nominal fee for commercial entities, but it
+is free for Java User Groups and individuals.
+The Java Specification Review Process
+Currently, over 350 JSRs are in development.
+A specification follows four major steps as it
+progresses through the process, as shown in
+the timeline.
+1. INITIATION: A specification is initiated by one or
+more members and approved for development
+by the Executive Committee.
+2. EARLY DRAFT: A group of experts is formed to
+draft the specification for the public, community
+and the Executive Committee to review. The
+Expert Group uses feedback from the review to
+revise the specification.
+3. PUBLIC DRAFT: The draft is posted on the Internet
+for a second review by the public. The Expert
+Group uses the feedback to refine the document.
+The Executive Committee decides if the draft
+should proceed to the next step. The Specification
+Lead ensures that the RI and its associated TCK
+are completed before sending the specification to
+the Executive Committee for final approval.
+Java Community Process Program Overview
+The Java Community Process (JCP) program is the formalization of the open, inclusive
+process that has been used since 1998 to develop and revise Java technology specifications,
+reference implementations (RI), and technology compatibility kits (TCK). Jav1300https://github.com/bradford80USA/unamed/actions/workflows/azure-container-webapp.yml1998350Program1300350Start a new codespace
+
+Click the Code button on your repository's landing page.
+Click the Codespaces tab.
+Click Create codespaces on main to create the codespace.
+After the codespace has initialized there will be a terminal present.
+Verify the GitHub Actions Importer CLI is installed and working. More information on the GitHub Actions Importer extension for the official GitHub CLI can be found here.
+
+Run the following command in the codespace terminal:
+
+gh actions-importer version
+Verify the output is similar to below.
+
+$ gh actions-importer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       unknown
+If gh actions-importer version did not produce similar output, please refer to the troubleshooting section.
+
+Bootstrap a GitLab server
+Execute the GitLab setup script that will start a container with GitLab running inside of it. The script should be executed when starting a new codespace or restarting an existing one.
+
+Run the following command from the codespace terminal:
+
+./gitlab/bootstrap/setup.sh
+After some time, a pop-up box should appear with a link to the URL for your GitLab server.
+
+You can also access the URL by going to the Ports tab in your terminal. Right-click the URL listed under the Local Address and click the Open in Browser tab.
+
+Open the GitLab server in your browser and use the following credentials to authenticate:
+
+Username: root
+Password: actions-importer-labs!
+Once authenticated, you should see a GitLab server with a few predefined pipelines in the actions-importer group.
+
+Labs for GitLab
+Perform the following labs to learn more about Actions migrations with GitHub Actions Importer:
+
+Configure credentials for GitHub Actions Importer
+Perform an audit on GitLab pipelines
+Forecast potential build runner usage
+Perform a dry-run migration of a GitLab pipeline
+Use custom transformers to customize GitHub Actions Importer's behavior
+Perform a production migration of a GitLab pipeline
+Troubleshoot the GitHub Actions Importer CLI
+The CLI extension for GitHub Actions Importer can be manually installed by following these steps:
+
+Verify you are in the codespace terminal
+
+Run this command from within the codespace terminal:
+
+gh extension install github/gh-actions-importer
+Verify the result of the install contains:
+
+$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-importer
+Verify GitHub Actions Importer CLI extension is installed and working by running the following command from the codespace terminal:
+
+gh actions-importer version
+
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
+
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
+
+**Additional context**
+Add any other context about the problem here.**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
+
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
+
+**Additional context**
+Add any other context or screenshots about the feature request here.https://github.com/bradford80USA/unamed/actions/workflows/azure-container-webapp.yml1998350Program Overview
+Privileges of Membership
+Over 1300 organizations and individuals parti-
+cipate in the JCP program. While there are no
+obligatory duties, members have the opportunity
+to influence the evolution of Java technology
+through the development of Java Specification
+Requests (JSR).
+Members can license their Java specifications
+under a variety of licenses, including open source
+options. Anyone must be able to create an indepen-
+dent implementation as long as they license and pass the
+TCK to ensure compatibility. Members must also
+make the option available to license the TCK and
+RI separately. In addition, individuals, educational
+organizations, and qualified nonprofits must have
+access to the TCKs free of charge.
+Successful Members:
+• Review proposed JSRs and drafts
+• Submit JSRs
+• Nominate themselves or others to serve
+on Expert Groups, which create or revise
+specifications
+• Build independent implementations
+• Vote on EC membership ballots
+• Nominate themselves for an EC seat
+Members of an Expert Group may also:
+• Serve as the Specification Lead of an
+Expert Group
+• Select others to join their Expert Group
+• Use feedback from members and the public
+to improve the quality of a specification
+• Complete a specification, its RI, and its
+associated TCK
+• Maintain a specification after it is written
+How to Become a Member
+A person or organization can become a member
+by signing the Java Specification Participation
+Agreement (JSPA). This agreement between an
+organization or individual and Oracle establishes
+each member’s rights and obligations when partici-
+pating in the JCP program. To cover costs, the JSPA
+charges a nominal fee for commercial entities, but it
+is free for Java User Groups and individuals.
+The Java Specification Review Process
+Currently, over 350 JSRs are in development.
+A specification follows four major steps as it
+progresses through the process, as shown in
+the timeline.
+1. INITIATION: A specification is initiated by one or
+more members and approved for development
+by the Executive Committee.
+2. EARLY DRAFT: A group of experts is formed to
+draft the specification for the public, community
+and the Executive Committee to review. The
+Expert Group uses feedback from the review to
+revise the specification.
+3. PUBLIC DRAFT: The draft is posted on the Internet
+for a second review by the public. The Expert
+Group uses the feedback to refine the document.
+The Executive Committee decides if the draft
+should proceed to the next step. The Specification
+Lead ensures that the RI and its associated TCK
+are completed before sending the specification to
+the Executive Committee for final approval.
+Java Community Process Program Overview
+The Java Community Process (JCP) program is the formalization of the open, inclusive
+process that has been used since 1998 to develop and revise Java technology specifications,
+reference implementations (RI), and technology compatibility kits (TCK). Jav1300Program Overview
+Privileges of Membership
+Over 1300 organizations and individuals parti-
+cipate in the JCP program. While there are no
+obligatory duties, members have the opportunity
+to influence the evolution of Java technology
+through the development of Java Specification
+Requests (JSR).
+Members can license their Java specifications
+under a variety of licenses, including open source
+options. Anyone must be able to create an indepen-
+dent implementation as long as they license and pass the
+TCK to ensure compatibility. Members must also
+make the option available to license the TCK and
+RI separately. In addition, individuals, educational
+organizations, and qualified nonprofits must have
+access to the TCKs free of charge.
+Successful Members:
+• Review proposed JSRs and drafts
+• Submit JSRs
+• Nominate themselves or others to serve
+on Expert Groups, which create or revise
+specifications
+• Build independent implementations
+• Vote on EC membership ballots
+• Nominate themselves for an EC seat
+Members of an Expert Group may also:
+• Serve as the Specification Lead of an
+Expert Group
+• Select others to join their Expert Group
+• Use feedback from members and the public
+to improve the quality of a specification
+• Complete a specification, its RI, and its
+associated TCK
+• Maintain a specification after it is written
+How to Become a Member
+A person or organization can become a member
+by signing the Java Specification Participation
+Agreement (JSPA). This agreement between an
+organization or individual and Oracle establishes
+each member’s rights and obligations when partici-
+pating in the JCP program. To cover costs, the JSPA
+charges a nominal fee for commercial entities, but it
+is free for Java User Groups and individuals.
+The Java Specification Review Process
+Currently, over 350 JSRs are in development.
+A specification follows four major steps as it
+progresses through the process, as shown in
+the timeline.
+1. INITIATION: A specification is initiated by one or
+more members and approved for development
+by the Executive Committee.
+2. EARLY DRAFT: A group of experts is formed to
+draft the specification for the public, community
+and the Executive Committee to review. The
+Expert Group uses feedback from the review to
+revise the specification.
+3. PUBLIC DRAFT: The draft is posted on the Internet
+for a second review by the public. The Expert
+Group uses the feedback to refine the document.
+The Executive Committee decides if the draft
+should proceed to the next step. The Specification
+Lead ensures that the RI and its associated TCK
+are completed before sending the specification to
+the Executive Committee for final approval.
+Java Community Process Program Overview
+The Java Community Process (JCP) program is the formalization of the open, inclusive
+process that has been used since 1998 to develop and revise Java technology specifications,
+reference implementations (RI), and technology compatibility kits (TCK). Jav
+Start a new codespace.
+
+Click the Code button on your repository's landing page.
+Click the Codespaces tab.
+Click Create codespaces on main to create the codespace.
+After the codespace has initialized there will be a terminal present.
+Verify the GitHub Actions Importer CLI is installed and working. More information on the GitHub Actions Importer extension for the official GitHub CLI can be found here.
+
+Run the following command in the codespace terminal:
+
+gh actions-importer version
+Verify the output is similar to below.
+
+$ gh actions-importer version
+gh version 2.14.3 (2022-07-26)
+gh actions-importer        github/gh-actions-importer v0.1.12
+actions-importer/cli       unknown
+If gh actions-importer version did not produce similar output, please refer to the troubleshooting section.
+
+Bootstrap your Azure DevOps organization
+Create an Azure DevOps personal access token (PAT):
+
+Navigate to your existing organization (https://dev.azure.com/:organization) in your browser.
+In the top right corner of the screen, click User settings.
+Click Personal access tokens.
+Select + New Token
+Name your token, select the organization where you want to use the token, and set your token to automatically expire after a set number of days.
+Select the following scopes (you may need to select Show all scopes at the bottom of the page to reveal all scopes):
+Agents Pool: Read
+Build: Read & execute
+Code: Read & write
+Project and Team: Read, write, & manage
+Release: Read
+Service Connections: Read
+Task Groups: Read
+Variable Groups: Read
+Click Create.
+Copy the generated API token and save it in a safe location.
+Execute the Azure DevOps setup script that will create a new Azure DevOps project in your organization to be used in the following labs. This script should only be run once.
+
+Run the following command from the codespace terminal, replacing the values accordingly:
+
+:organization: the name of your existing Azure DevOps organization
+:project: the name of the project to be created in your Azure DevOps organization
+:access_token: the PAT created in step 1 above
+./azure_devops/bootstrap/setup --organization :organization --project :project --access-token :access-token
+Open the newly created Azure DevOps project in your browser (https://dev.azure.com/:organization/:project)
+
+Once authenticated, you will see an Azure DevOps project with a few predefined pipelines.
+Labs for Azure DevOps
+Perform the following labs to learn how to migrate Azure DevOps pipelines to GitHub Actions using GitHub Actions Importer:
+
+Configure credentials for GitHub Actions Importer
+Perform an audit of an Azure DevOps project
+Forecast potential build runner usage
+Perform a dry-run migration of an Azure DevOps pipeline
+Use custom transformers to customize GitHub Actions Importer's behavior
+Perform a production migration of a Azure DevOps pipeline
+Troubleshoot the GitHub Actions Importer CLI
+The CLI extension for GitHub Actions Importer can be manually installed by following these steps:
+
+Verify you are in the codespace terminal
+
+Run this command from within the codespace terminal:
+
+gh extension install github/gh-actions-importer
+Verify the result of the install contains:
+
+$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-importer
+Verify GitHub Actions Importer CLI extension is installed and working by running the following command from the codespace terminal:
+
+gh actions-importer versionhttps://dev.azure.com/:organizationhttps://dev.azure.com/:organization/:project1{"$id":"1","innerException":null,"message":"A potentially dangerous Request.Path value was detected from the client (:).","typeName":"System.Web.HttpException, System.Web","typeKey":"HttpException","errorCode":0,"eventId":0}
+
+
+    19981Request.Pathgh actions-importer version**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
+
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
+
+**Additional context**
+Add any other context or screenshots about the feature request here.
+:
+
+$ gh extension install github/gh-actions-importer
+✓ Installed extension github/gh-actions-kingdom hearts 
