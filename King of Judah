@@ -1,4 +1,27 @@
-**Describe the bug**
+ Job count: **84**
+- Pipeline count: **32**
+
+- Execution time
+
+  - Total: **82 minutes**
+  - Median: **0 minutes**
+  - P90: **2 minutes**
+  - Min: **0 minutes**
+  - Max: **4 minutes**
+
+- Queue time
+
+  - Median: **0 minutes**
+  - P90: **1 minutes**
+  - Min: **0 minutes**
+  - Max: **5 minutes**
+
+- Concurrent jobs
+
+  - Median: **0**
+  - P90: **0**
+  - Min: **0**
+  - Max: **5****Describe the bug**
 A clear and concise description of what the bug is.
 
 **To Reproduce**
