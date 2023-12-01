@@ -2814,7 +2814,177 @@ sudo gitlab-rails runner "token = User.find_by_username('automation-bot').person
 https://gitlab.example.com/-/profile/personal_access_tokens?name=Example+Access+token&scopes=api,read_user,read_registry./gitlab/bootstrap/setup.sh./jenkins/bootstrap/setup.shhttps://gitlab.example.com/-/profile/personal_access_tokens?name=Example+Access+token&scopes=api,read_user,read_registrykingdom hearts 
 
 
-
+html>
+<head>
+  <title>My Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightblue;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+    }
+    p {
+      margin: 20px;
+    }
+    #bio {
+      border: 2px solid black;
+      padding: 10px;
+      background-color: white;
+    }
+    #resume {
+      border: 2px solid black;
+      padding: 10px;
+      background-color: white;
+    }
+    #contact {
+      border: 2px solid black;
+      padding: 10px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Personal Website</h1>
+  <div id="bio">
+    <h2>Biography</h2>
+    <p>Hi, I'm Yahweh Raphaiam, a web developer and a hobbyist photographer. I live in Henagar, Alabama, United States. I love creating websites and taking pictures of nature and people. I have a bachelor's degree in computer science from the University of Alabama. I have been working as a web developer for five years, and I have experience in HTML, CSS, Javascript, PHP, and Python. I enjoy learning new technologies and frameworks, and I'm always looking for new challenges and opportunities.</p>
+  </div>
+  <div id="resume">
+    <h2>Resume</h2>
+    <p>Here is a summary of my skills and work experience. You can download my full resume [here].</p>
+    <table>
+      <tr>
+        <th>Skills</th>
+        <th>Work Experience</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Bootstrap</li>
+            <li>jQuery</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Web Developer at ABC Inc. (2021 - present)</li>
+            <li>Web Developer at XYZ Ltd. (2019 - 2021)</li>
+            <li>Web Developer Intern at LMN Co. (2018 - 2019)</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="contact">
+    <h2>Contact</h2>
+    <p>If you want to get in touch with me, you can use any of the following methods:</p>
+    <ul>
+      <li>Email: elelyon.rapha@example.com</li>
+      <li>Phone: +1 (123) 456-7890</li>
+      <li>LinkedIn: [Yahweh]</li>
+      <li>Twitter: [@elelyon.rapha]</li>
+      <li>Instagram: [@elelyon.rapha]</li>
+    </ul>
+  </div>
+</body>
+</html>
+<html>
+<head>
+  <title>My Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightblue;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+    }
+    p {
+      margin: 20px;
+    }
+    #bio {
+      border: 2px solid black;
+      padding: 10px;
+      background-color: white;
+    }
+    #resume {
+      border: 2px solid black;
+      padding: 10px;
+      background-color: white;
+    }
+    #contact {
+      border: 2px solid black;
+      padding: 10px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Personal Website</h1>
+  <div id="bio">
+    <h2>Biography</h2>
+    <p>Hi, I'm John Doe, a web developer and a hobbyist photographer. I live in Henagar, Alabama, United States. I love creating websites and taking pictures of nature and people. I have a bachelor's degree in computer science from the University of Alabama. I have been working as a web developer for five years, and I have experience in HTML, CSS, Javascript, PHP, and Python. I enjoy learning new technologies and frameworks, and I'm always looking for new challenges and opportunities.</p>
+  </div>
+  <div id="resume">
+    <h2>Resume</h2>
+    <p>Here is a summary of my skills and work experience. You can download my full resume [here].</p>
+    <table>
+      <tr>
+        <th>Skills</th>
+        <th>Work Experience</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Bootstrap</li>
+            <li>jQuery</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Web Developer at ABC Inc. (2021 - present)</li>
+            <li>Web Developer at XYZ Ltd. (2019 - 2021)</li>
+            <li>Web Developer Intern at LMN Co. (2018 - 2019)</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="contact">
+    <h2>Contact</h2>
+    <p>If you want to get in touch with me, you can use any of the following methods:</p>
+    <ul>
+      <li>Email: johndoe@example.com</li>
+      <li>Phone: +1 (123) 456-7890</li>
+      <li>LinkedIn: [John Doe]</li>
+      <li>Twitter: [@johndoe]</li>
+      <li>Instagram: [@johndoe]</li>
+    </ul>
+  </div>
+</body>
+</html>
+elelyon.rapha@example.com+1 (123) 456-7890johndoe@example.comhttps://www.msn.com/en-US/finance/-career-education/triumphant-openai-ceo-spends-a-whole-interview-dodging-questions-about-why-he-was-fired-like-hes-in-the-matrix-but-does-suggest-the-nonprofit-board-is-in-for-some-big-changes/ar-AA1kNMVZ?ocid=sapphireappshare@crypto_hulk34kingdom hearts 
 
 
 
