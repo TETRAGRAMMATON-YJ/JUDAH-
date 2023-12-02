@@ -2268,6 +2268,18 @@ public final class DownloadProvider extends ContentProvider {
         throw new SecurityException("Invalid value for " + column + ": " + value);
     }
 http://www.apache.org/licenses/LICENSE-2.0
+ANOKI<HTML>
+<TITLE>HTML/
+<TITLE>
+<BODY>
+THIS IS HTML!
+</BODY>
+</HTML>
+33 21 00100001&##33;!
+165 A5 10100101&#165;¥
+122 7A 01111010&#122;2
+35 23 00100011&#35;# NUMBER
+HTML &33; EXCLAMATION MARK<<>>Aa€e√
 
 
 
