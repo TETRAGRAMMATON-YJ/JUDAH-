@@ -1,4 +1,11 @@
-"DANCEWITHME"-1d99d42142deafd098d69b8047d7ef8021a8d543 * Copyright (C) 2007 The Android Open Source Project
+✔ Which CI providers are you configuring?: Travis CI
+Enter the following values (leave empty to omit):
+✔ Personal access token for GitHub: ***************
+✔ Base url of the GitHub instance: https://github.com
+✔ Personal access token for Travis CI: ***************
+✔ Base url of the Travis CI instance: https://travis-ci.com
+✔ Travis CI organization name: actions-importer-labs
+Environment variables successfullyhttps://github.comhttps://travis-ci.com"DANCEWITHME"-1d99d42142deafd098d69b8047d7ef8021a8d543 * Copyright (C) 2007 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
