@@ -1,3 +1,31 @@
+ Wget < Formula
+  homepage "https://www.gnu.org/software/wget/"
+  url "https://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz"
+  sha256 "52126be8cf1bddd7536886e74c053ad7d0ed2aa89b4b630f76785bac21695fcd"
+
+  def install
+    system "./configure", "--prefix=#{prefix}"
+    system "make", "install"
+  end
+end
+
+https://www.gnu.org/software/wget//bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"https://ftp.gnu.org/gnu/wget/wget-1.15.tar.gzhttps://raw.githubusercontent.com/Homebrew/install/HEAD/install.shUsage:  cmc [ -c HOST | -x HOST ]
+        cmc [ -l | -X ]
+        cmc -h
+
+ControlMaster Controller - Eases management of SSH ControlMaster connections
+
+Options:
+    -h      show this help message and exit
+    -c HOST check HOST ControlMaster connection status (may be specified more
+            than once)
+    -d      print debug information
+    -l      list all active ControlMaster connection sockets
+    -x HOST exit ControlMaster session (may be specified more than once)
+    -X      exit all ControlMaster connections with sockets
+
+Notes:
+    - Any unused sockets in  #cc-dev-workprograms<emoji>⎵<category>:⎵<name>
 $ gh actions-importer version
 gh version 2.14.3 (2022-07-26)
 gh actions-importer        github/gh-actions-importer v0.1.12
