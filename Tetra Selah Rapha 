@@ -1,4 +1,11 @@
-"stay"-# Perform a production migration of a GitLab pipeline
+✔ Which CI providers are you configuring?: Travis CI
+Enter the following values (leave empty to omit):
+✔ Personal access token for GitHub: ***************
+✔ Base url of the GitHub instance: https://github.com
+✔ Personal access token for Travis CI: ***************
+✔ Base url of the Travis CI instance: https://travis-ci.com
+✔ Travis CI organization name: actions-importer-labs
+Environment variables successfullyhttps://github.comhttps://travis-ci.com"stay"-# Perform a production migration of a GitLab pipeline
 
 In this lab, you will use the `migrate` command to convert a GitLab pipeline and open a pull request with the equivalent Actions workflow.
 
