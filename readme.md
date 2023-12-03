@@ -4,7 +4,35 @@
 yarn dev
 
 # To interact with the SDK directly:
-yarn workspace @coinbase/wallet-sdk "<command>"
+yarn workspace @coinbase/wallet-sdk "<thank!":you>"#[simd_test = "sse2"]
+unsafe fn test_mm_adds_epi16() {
+    let a = _mm_set_epi16(0, 1, 2, 3, 4, 5, 6, 7);
+    let b = _mm_set_epi16(8, 9, 10, 11, 12, 13, 14, 15);
+    let r = _mm_adds_epi16(a, b);
+    let e = _mm_set_epi16(8, 10, 12, 14, 16, 18, 20, 22);/// Add packed 16-bit integers in `a` and `b` using saturation.
+#[inline]
+#[target_feature(enable = "sse2")]
+#[cfg_attr(test, assert_instr(paddsw))]
+pub unsafe fn _mm_adds_epi16(a: __m128i, b: __m128i) -> __m128i {
+    unsafe { paddsw(a, b) }
+}Running `target/release/zksync_server --genesis`
+2023-04-05T14:23:40.291277Z  INFO zksync_core::genesis: running regenesis
+thread 'main' panicked at 'Invalid bytecode: ()', core/lib/utils/src/bytecode.rs:159:10
+stack backtrace:
+   0:        0x104551410 - std::backtrace_rs::backtrace::libunwind::trace::hf9c5171f212b04e2
+                               at /rustc/d5a82bbd26e1ad8b7401f6a718a9c57c96905483/library/std/src/../../backtrace/src/backtrace/libunwind.rs:93:5
+   1:        0x104551410 - std::backtrace_rs::backtrace::trace_unsynchronized::h179003f6ec753118
+                               at /rustc/d5a82bbd26e1ad8b7401f6a718a9c57c96905483/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5
+   2:        0x104551410 - std::sys_common::backtrace::_print_fmt::h92d38f701cf42b17
+                               at /rustc/d5a82bbd26e1ad8b7401f6a718a9c57c96905483/library/std/src/sys_common/backtrace.rs:65:5
+   3:        0x104551410 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::hb33e6e8152f78c95
+                               at /rustc/d5a82bbd26e1ad8b7401f6a718a9c57c96905483/library/std/src/sys_common/backtrace.rs:44:22
+   4:        0x10456cdb0 - core::fmt::write::hd33da007f7a27e39
+                               at /rustc/d5a82bbd26e1ad8b7401f6a718a9c57c96905483/library/core/src/fmt/mod.rs:1208:17
+   5:        0x10454b41c - std::io::Write::write_fmt::h7edc10723862001e
+                               at /rustc/d5a82bbd26e1ad8b7401f6a718a9c57c96905483/library/std/src/io/mod.rs:1682:1560305eaa270a3fcf9ff2eeff82dc5e8b30de48c210723862001https://storage.googleapis.com/matterlabs-setup-keys-us/setup-keys/setup_2%5E20.keyInitializing download: https://storage.googleapis.com/matterlabs-setup-keys-us/setup-keys/setup_2%5E20.key
+SSL error: certificate verify failed
+Solution. Make sure that the version ofkingdom hearts 
 
 # To lint all files
 yarn lint
