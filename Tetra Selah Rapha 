@@ -1,4 +1,4 @@
-# Perform a production migration of a GitLab pipeline
+"stay"-# Perform a production migration of a GitLab pipeline
 
 In this lab, you will use the `migrate` command to convert a GitLab pipeline and open a pull request with the equivalent Actions workflow.
 
