@@ -1,4 +1,9 @@
-1/2×0×2+cdx1/2xY!¥€~{\}~€¥^}}}} Wget < Formula
+type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -yhttps://cli.github.com/packages/githubcli-archive-keyring.gpgREADME.mdhttps://cli.github.com/packageshttps://en.m.wikipedia.org/wiki/Main_Pagehttps://github.com/Gerrime/Grimlifestyles/issues/10#issue-1393667082: 198964525.11/2×0×2+cdx1/2xY!¥€~{\}~€¥^}}}} Wget < Formula
   homepage "https://www.gnu.org/software/wget/"
   url "https://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz"
   sha256 "52126be8cf1bddd7536886e74c053ad7d0ed2aa89b4b630f76785bac21695fcd"
