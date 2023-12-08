@@ -1,4 +1,18 @@
-# Azure Pipelines migrations powered by GitHub Actions Importer
+pip install openai langchain
+import os
+
+from langchain.retrievers.you import YouRetriever
+from langchain.chains import RetrievalQA
+from langchain.chat_models import ChatOpenAI
+
+
+os.environ["YDC_API_KEY"] = "YOUR YOU.COM API KEY"
+os.environ["OPENAI_API_KEY"] = "YOUR OPENAI API KEY"
+yr = YouRetriever()
+model = "gpt-3.5-turbo-16k"
+qa = RetrievalQA.from_chain_type(llm=ChatOpenAI(model=model), chain_type="stuff", retriever=yr)
+langchain.chainsqa.runYOU.COMqa.run("how was the New York City pinball ban lifted?")
+https://ydc-index.us.auth0.com/u/reset-password?ticket=Cvy9S1ksyRCNwrMZDZphTG02QmqCnoOF#langchain.retrievers.you60305eaa270a3fcf9ff2eeff82dc5e8b30de48c2# Azure Pipelines migrations powered by GitHub Actions Importer
 
 These instructions will guide you through configuring the GitHub Codespaces environment that you will use in these labs to learn how to use GitHub Actions Importer to migrate Azure DevOps pipelines to GitHub Actions.
 
