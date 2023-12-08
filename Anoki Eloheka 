@@ -1,4 +1,6 @@
-YOU.COMpip install openai langchain
+gh actions-importer migrate circle-ci --target-url https://github.com/:owner/:repo --output-dir tmp/migrate --circle-ci-project circleci-hello-world
+[2022-08-20 22:08:20] Logs: 'tmp/migrate/log/actions-importer-20220916-014033.log'
+[2022-08-20 22:08:20] Pull request: 'https://github.com/:owner/:repo/pull/1'https://github.com/:owner/:repolangchain.retrievers.you2022-08-20 22:08:2020220916-0140gh actions-importer migrate circle-ci --target-url https://github.com/:owner/:repo --outYOU.COMpip install openai langchain
 import os
 
 from langchain.retrievers.you import YouRetriever
