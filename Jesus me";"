@@ -473,7 +473,7 @@ If applicable, add screenshots to help explain your problem.
 Add any other context about the problem here.**Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-**Describe the solution you'd like**
+**Describ tooe the solution you'd like**
 A clear and concise description of what you want to happen.
 
 **Describe alternatives you've considered**
@@ -2599,3 +2599,7 @@ Multi-Modal Causal Attention (MMCA) We devise a novel MMCA for multi-modal model
 Data Blending for Interleaved Inputs To facilitate conversations with interleaved modalities, DeepSpeed-VisualChat employs assorted data blending techniques on existing datasets, overcoming the shortage of interleaved text-and-image inputs in most available open-source datasets.
 2 Model architecture overview
 deepspeed-info@microsoft.com2kingdom hearts 
+NVIM v0.10.0-dev-1801+g2ebd328a7
+Build type: RelWithDebInfo
+LuaJIT 2.1.1700008891https://t.me/+aO8Ohy2APNFkYzAx2.1.1700008891https://github.com/bradford80USA/unamed/issues/40#issue-2031872125gh pr checkout 9898[Jesus.txt](https://github.com/bradford80USA/unamed/files/13623472/Jesus.txt)
+[Jesus main.txt](https://github.com/bradford80USA/unamed/files/13623471/Jesus.main.txt)
