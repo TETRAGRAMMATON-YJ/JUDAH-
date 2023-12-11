@@ -2571,3 +2571,145 @@ Add any other context or screenshots about the feature request here.
 
 $ gh extension install github/gh-actions-importer
 ✓ Installed extension github/gh-actions-kingdom hearts 
+Here is an example implementation of a singly linked list in C with the functionalities to add, delete, and find nodes:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* head = NULL;
+
+void insert(int data) {
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = head;
+    head = new_node;
+}
+
+void delete(int data) {
+    struct Node* temp = head;
+    struct Node* prev = NULL;
+    if (temp != NULL && temp->data == data) {
+        head = temp->next;
+        free(temp);
+        return;
+    }
+    while (temp != NULL && temp->data != data) {
+        prev = temp;
+        temp = temp->next;
+    }
+    if (temp == NULL) {
+        return;
+    }
+    prev->next = temp->next;
+    free(temp);
+}
+
+void find(int data) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        if (temp->data == data) {
+            printf("%d is present in the linked list.\n", data);
+            return;
+        }
+        temp = temp->next;
+    }
+    printf("%d is not present in the linked list.\n", data);
+}
+
+int main() {
+    insert(1);
+    insert(2);
+    insert(3);
+    insert(4);
+    insert(5);
+    printf("Linked list before deletion: ");
+    find(3);
+    delete(3);
+    printf("Linked list after deletion: ");
+    find(3);
+    return 0;
+}
+```
+
+In this implementation, `struct Node` represents a node in the linked list. The `insert` function adds a new node to the beginning of the list, the `delete` function removes a node with the given data from the list, and the `find` function searches for a node with the given data in the list.
+
+This implementation also includes a simple example program that creates a linked list with five nodes, deletes a node with data 3, and then searches for a node with data 3.
+
+I hope this helps!
+
+Source: Conversation with Bing, 12/11/2023
+(1) Linked List Operations: Traverse, Insert and Delete - Programiz. https://www.programiz.com/dsa/linked-list-operations.
+(2) C program to create and traverse a Linked List - Codeforwin. https://codeforwin.org/data-structures/c-program-to-create-and-traverse-singly-linked-list.
+(3) How to perform insert, delete, and display an element into a linked .... https://stackoverflow.com/questions/14953213/how-to-perform-insert-delete-and-display-an-element-into-a-linked-list-in-c.
+(4) data structures - Linked list in C; delete () and search () - Stack .... https://stackoverflow.com/questions/17386481/linked-list-in-c-delete-and-search.
+(5) Linked List in C | Implement LinkedList Data Structure | Edureka. https://www.edureka.co/blog/linked-list-in-c/.
+(6) github.com. https://github.com/satyamsingh-stack/DSA/tree/ce06b187bc9ce20ea49de06dd1f343eaae031209/loop_detection.c.
+(7) github.com. https://github.com/makhambettorezhan/c__pointers/tree/1a1767cec075c07292dd957f6633a2d34b683578/linked_list%2Flinked_lst_demo.c.
+(8) github.com. https://github.com/harshalkhandait/Linked-List/tree/3dfcc103af04259f0844b6070ca3e04f5fa56811/1_LinkedList.c.12/11/2023https://www.programiz.com/dsa/linked-list-operations.https://stackoverflow.com/questions/14953213/how-to-perform-insert-delete-and-display-an-element-into-a-linked-list-in-c.https://codeforwin.org/data-structures/c-program-to-create-and-traverse-singly-linked-list.https://stackoverflow.com/questions/17386481/linked-list-in-c-delete-and-search.
+https://github.com/harshalkhandait/Linked-List/tree/3dfcc103af04259f0844b6070ca3e04f5fa56811/1_LinkedList.c.https://github.com/makhambettorezhan/c__pointers/tree/1a1767cec075c07292dd957f6633a2d34b683578/linked_list%2Flinked_lst_demo.c.https://github.com/satyamsingh-stack/DSA/tree/ce06b187bc9ce20ea49de06dd1f343eaae031209/loop_detection.c.#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* head = NULL;
+
+void insert(int data) {
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = head;
+    head = new_node;
+}
+
+void delete(int data) {
+    struct Node* temp = head;
+    struct Node* prev = NULL;
+    if (temp != NULL && temp->data == data) {
+        head = temp->next;
+        free(temp);
+        return;
+    }
+    while (temp != NULL && temp->data != data) {
+        prev = temp;
+        temp = temp->next;
+    }
+    if (temp == NULL) {
+        return;
+    }
+    prev->next = temp->next;
+    free(temp);
+}
+
+void find(int data) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        if (temp->data == data) {
+            printf("%d is present in the linked list.\n", data);
+            return;
+        }
+        temp = temp->next;
+    }
+    printf("%d is not present in the linked list.\n", data);
+}
+
+int main() {
+    insert(1);
+    insert(2);
+    insert(3);
+    insert(4);
+    insert(5);
+    printf("Linked list before deletion: ");
+    find(3);
+    delete(3);
+    printf("Linked list after deletion: ");
+    find(3);
+    return 0;
+}
