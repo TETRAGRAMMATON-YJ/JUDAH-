@@ -1,1 +1,114 @@
+Array filled with zeros:
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
 
+Array filled with ones:
+[[1. 1. 1. 1.]
+ [1. 1. 1. 1.]
+ [1. 1. 1. 1.]]
+
+Uninitialized array:
+[[1. 1. 1. 1.]
+ [1. 1. 1. 1.]
+ [1. 1. 1. 1.]]
+
+Identity matrix:
+[[1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+
+Matrix with ones on other diagonal:
+[[0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0.]]
+
+Array generated from 1 to 10 with step 2
+[1 3 5 7 9]
+
+Array that contains 7 numbers distributed from 1 to 10
+[ 1.   2.5  4.   5.5  7.   8.5 10. ]
+
+Array that is defined by x*y function, where x and y are indices
+[[0. 0. 0.]
+ [0. 1. 2.]
+ [0. 2. 4.]]
+
+
+[Program finished]11021 3 5 778.5 10Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pydroid3/files/accomp_files/iiec_run/iiec_run.py", line 31, in <module>
+    start(fakepyfile,mainpyfile)
+  File "/data/user/0/ru.iiec.pydroid3/files/accomp_files/iiec_run/iiec_run.py", line 30, in start
+    exec(open(mainpyfile).read(),  __main__.__dict__)
+  File "<string>", line 7
+    clear() >+>(people:))(vars:)(and/):functions:)cl
+                        ^
+SyntaxError: unmatched ')'
+
+[Program finished]Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pydroid3/files/accomp_files/iiec_run/iiec_run.py", line 31, in <module>
+    start(fakepyfile,mainpyfile)
+  File "/data/user/0/ru.iiec.pydroid3/files/accomp_files/iiec_run/iiec_run.py", line 30, in start
+    exec(open(mainpyfile).read(),  __main__.__dict__)
+  File "<string>", line 2
+    clear() >+>(people:))(vars:)(and/):functions:)cl
+                        ^
+SyntaxError: unmatched ')'
+
+[Program finished]console.log('Hello!');
+clear() >+>(people:))(vars:)(and/):functions:)cl
+  eared.
+//:(matrix:)(operation:)
+A=1+2,-3+4
+B=5+6,-7+8
+matrix(A*B+transpose(A/B)+inverse(A*B+unit(2)) >> 
+  -9.08571, 20.82857
+ -42.58333, 14.0
+report()
+ψᵩ=
+  clear() >> vars and functions cleared
+//matrix operation
+A=1+2,-3+4
+B=5+6,-7+8
+matrix(A*B+transpose(A/B)+inverse(A*B+unit(2)) >> 
+  -9.08571, 20.82857
+ -42.58333, 14.0
+report()
+Details for matrix(A*B)
+1st term=
+  1.0, 2.0
+ -3.0, 4.0
+2nd calculation= 
+  -9.0, 22.0
+ -43.0, 14.0
+Details for matrix(A/B)
+1st term=
+  1.0, 2.0
+ -3.0, 4.0
+2nd calculation= 
+ -0.08571, 0.41667
+ -1.17143, 0.0
+Details for matrix(A*B+transpose(A/B)+inverse(A*B+unit(2))
+1st term=
+  -9.0, 22.0
+ -43.0, 14.0
+2nd term= 
+ -0.08571, -1.17143
+  0.41667,  0.0
+
+answer=
+ -9.085714285714285,20.82857142857143
+-42.583333333333336,14.0             08571428571482857142857158333333333320.82857
+ -42.58333828571428571085714285714085714285714828571428571583333333333583333333333clear() >> vars and functions cleared
+//matrix operation
+A=1+2,-3+4
+B=5+6,-7+8
+matrix(A*B+transpose(A/B)+inverse(A*B+unit(2)) >> 
+  -9.08571, 20.82857
+ -42.58333, 14.0
+report()
+ψᵩ=
