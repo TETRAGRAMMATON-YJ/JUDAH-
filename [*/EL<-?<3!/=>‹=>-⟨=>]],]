@@ -1,0 +1,187 @@
+For a given sequence, an, series, sn is sum of each, a1 + a2 + a3 +… an. If an = n, i.e 1, 2, 3, ...n, S10 is 1 + 2 + 3 +...10 = 55. If an=n*n, S10=385. This can be calculated with series function, summ() as
+summ(n,n,1,10) >> 55
+summ(n*n,n,1,10) >> 385
+summ(n*n,n,1,10000) >> 33338333500 Either iterative or recursive (as seen before) can be used based on preference or situation.
+For a function,
+f(x)=x+x*x
+summ(f(n),n,1,10) >> 440
+
+summ(f(x),x,a,b) where f(x) is any function or expression, x is variable to be iterated, a = start value , b = end value. a and b are rounded off. (i.e. 1.9 to 1, 10.9 to 10) as shown below example.
+summ(n,n,1.9,10.9) >> 55
+
+Fibonacci number can be calculated with above series function very effectively. However, without knowing the formula, recursive method is easy and quick to program with slight speed disadvantage.
+n=30
+summ(C(n-x-1,x),x,0,(n-1)/2) >> 832040. Formula for the Fibonacci function from wikipedia is shown below;
+
+
+
+
+
+
+A function can be made easily for the Fibonacci function as shown below;
+Fibo(n)=summ(C(n-k-1,k),k,0,(n-1)/2)
+Fibo(100) >> 3.542248481792619E20
+Fibo(1000) >> 4.346655768693744E208
+Fibo(1471) >> 1.1785114478791465E307 This is almost upper limit of double precision, not limited by calculator memory or speed.
+
+Another example,
+for a sequence,
+a(n)=1/(n*n-n-2) or 1/((n+1)*(n-2))
+series can be analytically solved. However, the answer can be confirmed with this series function as
+s(n)=summ(a(x),x,3,n)
+=s(10) >> 0.5104377104377105;*)
+=s(100) >> 0.6011104443777711:')
+=s(1000) >> 0.6101111104444433:)
+
+If you didn’t figure out the analytic answer yet, you can use above results to get a hint for the answer.
+There will be many cases this series function can save your time or assist your learning.
+×÷×π§}}
+When several calculations need to done for a range of index, list() can be used as shown below;
+list(Fibo(x),x,10,20) will display calculated list in a pop up window as
+10,55.0
+11,89.0
+12,144.0
+…=∆
+20,6765.0
+&\-_-/
+list(Fibo(x),x,10,30,5) by step 5
+
+(*list(CDF(n,x),x,-3.5,-2.5,0.1) Decimal points are 
+_valid when step is used from 
+-3.5 to -2.5 with step of 0.1. If step is set to -0.1. 
+"accidentally in this case, 
+(It will auto correct to (0.1) to avoid infinite loop).
+(“no”){{can be added to suppress list popup}}}.
+))) This option can be used within dialog.
+list(x2,x,1,5,no) 
+-Will suppress list pop up.
+list(x2,x,1.5,no) [Will out for {x=1.5}:=only].
+list(x2,x,1,4,9,16) (/Will out out for x = each values;);= [12,42,92,162].
+[A=1,9,2]
+list(x2,x,A)
+~{\{\Will be translated to list(x2,x,1,9,2) to allow simplified GUI input}}}.
+B=A,20,A
+(list(x2,x,B) will be translated to list:)¥((:x2,x,1,9,2,20,1,9,2).
+C=B,123
+list(x2,x,C,789) 
+(*Will be translated to list')(x2,x,1,9,2,20,1,9,2,123,789).Nested expression is recursively interpreted.
+list(x2,x,start,stop,step). 
+ If abs(step) is bigger than ans(max(start,stop), 
+Step is considered as an another value to be listed. 
+As an example,
+list(x2,x,1,3,5) will list 12, 32, 52 instead of 12, 32.
+list(x2,x,start,stop) if abs(stop-step) is less than 1, will list both start and end. As an example,
+list(x2,x,2,2,5) will list 22, 2.52 instead of 22 only.
+
+
+
+Integration
+
+Numerical integration capability is added primarily for CDF calculation, (However, any general purpose numerical integration can be done easily. As an example, integration of (sin(x) from 0); to π)!? 
+
+
+
+
+can be calculated as 
+shown below
+angle(rad) angle unit to 
+(radian*
+integ)&(sin(x),x,0,pi)? >> 2.00000…<=∆°π^÷
+and pi are same.
+Argument 
+description is shown below;
+integ(expression,variable,start,stop,accuracy). 
+Accuracy is optional and default is (<\1E=-7L>). Higher accuracy takes longer time.
+integ
+(sinx(x),x,0,pi,1E-+-L(17./)) >> 1.99858…) less accurate but quicker.
+
+Standard normal distribution function shown below can not be integrated analytically and CDF need to be calculated 
+numerically or need to 
+(*relay on calculated table);. 
+However, this can be done with the integration function. 
+(*Normal distribution 
+density function is shown below(#*;*))/)
+
+
+
+
+\mu =0
+
+For σ=1, µ=0, PDF f(x) is
+f(x)=1/sqrt(2π)*e^(-0.5x²)
+CDF, F(n) can be calculated as
+F(n)=integ(f(x),x,0,n)*2
+F(1) >> 0.6826894921375498 both side up to 1 σ
+F(2) >> 0.9544997360866873
+F(3) >> 0.9973002039362352
+
+
+Other useful statistical functions related with integration are beta, gamma, CDF of F, Х2, t distribution.
+Incomplete beta function is defined as
+
+
+
+
+
+
+
+This can be calculated as
+B(x,a,b)=integ(t^(a-1)*(1-t)^(b-1),t,0,x)
+
+Gamma incomplete function is defined as
+Gi(x,z)=integ(t^(x-1)/e^t,t,0,z)
+
+CDF of F distribution is defined and calculated as
+F(x,df1,df2)=B(df1*x/(df1*x+df2),0.5*df1,0.5*df2)/B(0.99999,0.5*df1,0.5*df2)
+F(5,10,20) >> 0.9989034106129915 or
+CDF(F,5,10,20) >> 0.9989034106129915
+
+CDF for student t distribution is defined and calculated as
+T(t,n)=B((t+(t*t+n)^0.5)/(2*(t*t+n)^0.5),n/2,n/2)/B(0.99999,n/2,n/2)
+T(3,10) >> 0.9933281724887152 or
+CDF(t,3,10) >> 0.9933281724887152
+
+CDF for Х2 is defined and calculated as
+Xsq(x,n)=Gi(n/2,x/2)/Gi(n/2,100)
+Xsq(2,5) >> 0.1508559430292282 or
+CDF(χ²,2,5) >> 0.1508559430292282
+
+<\123
+55385
+3333
+8
+333500
+4401.9,1083204054
+224848
+179
+23
+466557
+68693
+17851
+144
+78795
+1043
+77104376
+0111
+04443
+776
+1011111
+0444
+59
+,2,20,14,9,165
+222, 2.5
+2220682689492
+13795
+4499
+7360869973
+00
+20
+39365,10,
+20
+998903410612
+99
+33
+281724
+881508
+55
+943029\>
